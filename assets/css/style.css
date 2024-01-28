@@ -413,7 +413,17 @@ body {
 
 
 
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
 
+.about { text-align: center; }
+
+.about .section-text { margin-block: 15px 55px; }
+
+.about {
+    padding-bottom: 0;
+}
 
 /*-----------------------------------*\
   #SERVICE
@@ -1086,6 +1096,10 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   .section-text {
     max-width: 50ch;
     margin-inline: auto;
+  }
+
+  .about .section-text {
+    max-width: 87ch;
   }
 
 
