@@ -60,46 +60,27 @@
           <li class="header-top-item">
             <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
 
-            <p class="item-title">Call Us :</p>
+            <p class="item-title">Call Us:</p>
 
-            <a href="tel:01234567895" class="item-link">012 (345) 67 895</a>
+            <a href="tel:"+19084641166" class="item-link">(908) 464-1166</a>
           </li>
 
           <li class="header-top-item">
             <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-            <p class="item-title">Opening Hour :</p>
+            <p class="item-title">Open Today:</p>
 
-            <p class="item-text">Sunday - Friday, 08 am - 09 pm</p>
+            <p class="item-text" id="today-hours"></p>
           </li>
 
           <li>
             <ul class="social-list">
 
+            <a href="https://www.yelp.com/biz/berkeley-barber-shop-berkeley-heights" class="social-link">
               <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
+                Find us on Yelp! <img height="20" width="20" style="margin-left: 10px" src="assets/images/yelp.png">
               </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-                </a>
-              </li>
-
+            </a>
             </ul>
           </li>
 
@@ -112,15 +93,19 @@
       <div class="container">
 
         <a href="#" class="logo">
-          Barber
-          <span class="span">Hair Salon</span>
+            Berkeley<br>
+          Barbershop
         </a>
 
         <nav class="navbar container" data-navbar>
           <ul class="navbar-list">
 
             <li class="navbar-item">
-              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              <a href="#" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#about" class="navbar-link" data-nav-link>About</a>
             </li>
 
             <li class="navbar-item">
@@ -128,19 +113,15 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#pricing" class="navbar-link" data-nav-link>Pricing</a>
-            </li>
-
-            <li class="navbar-item">
               <a href="#gallery" class="navbar-link" data-nav-link>Gallery</a>
             </li>
 
             <li class="navbar-item">
-              <a href="#appointment" class="navbar-link" data-nav-link>Appointment</a>
+              <a href="#reviews" class="navbar-link" data-nav-link>Reviews</a>
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="navbar-link" data-nav-link>Contact</a>
+              <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
             </li>
 
           </ul>
@@ -195,182 +176,32 @@
       <section class="section about" id="about" aria-label="about">
           <div class="container">
               <h2 class="h2 section-title text-center">About Us</h2>
-              <p class="section-text text-center">
-                Welcome to Berkeley Barber Shop, an icon of Berkeley Heights, New Jersey since 1986. With a rich legacy deeply rooted in our community, we take pride in redefining and elevating personal style. Our skilled barbers, with decades of experience, provide precision cuts that stand the test of time. At Berkeley Barber Shop, we go beyond grooming – we craft personalized experiences that amplify your confidence. Step into a tradition of excellence, where classic meets contemporary, and let us redefine your style journey.
-              </p>
+              <div class="image-text-container">
+                  <div class="image-container">
+                      <img src="assets/images/man_getting_haircut.webp" alt="Man getting a haircut">
+                  </div>
+                  <div class="text-container">
+                      <p class="section-text">
+                      Welcome to Berkeley Barber Shop, an icon of <b>Berkeley Heights, New Jersey</b> since 1986. With a rich legacy deeply rooted in our community, we take pride in redefining and elevating personal style. Our skilled barbers, with decades of experience, provide precision cuts that stand the test of time. At Berkeley Barber Shop, we go beyond grooming – we craft personalized experiences that amplify your confidence. Step into a tradition of excellence, where classic meets contemporary, and let us redefine your style journey.
+                      </p>
+                  </div>
+              </div>
+
           </div>
       </section>
-
-
-
-      <!-- 
-        - #SERVICE
-      -->
-
-      <section class="section service" id="services" aria-label="services">
-        <div class="container">
-
-          <h2 class="h2 section-title text-center">Service We Provide</h2>
-
-          <p class="section-text text-center">
-            Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua suspendisse
-          </p>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <i class="flaticon-salon"></i>
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Hair Cutting Style</a>
-                </h3>
-
-                <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <a href="#" class="card-btn" aria-label="more">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <i class="flaticon-shampoo"></i>
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Hair Washing</a>
-                </h3>
-
-                <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <a href="#" class="card-btn" aria-label="more">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <i class="flaticon-hot-stone"></i>
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Body Treatments</a>
-                </h3>
-
-                <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <a href="#" class="card-btn" aria-label="more">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <i class="flaticon-treatment"></i>
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Beauty & Spa</a>
-                </h3>
-
-                <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <a href="#" class="card-btn" aria-label="more">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <i class="flaticon-shaving-razor"></i>
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Stylist Shaving</a>
-                </h3>
-
-                <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <a href="#" class="card-btn" aria-label="more">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <i class="flaticon-hair-dye"></i>
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Multi Hair Colors</a>
-                </h3>
-
-                <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <a href="#" class="card-btn" aria-label="more">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
 
       <!-- 
         - #PRICING
       -->
 
-      <section class="section pricing has-bg-image has-before" id="pricing" aria-label="pricing"
+      <section class="section pricing has-bg-image has-before" id="services" aria-label="services"
         style="background-image: url('./assets/images/pricing-bg.jpg')">
         <div class="container">
 
-          <h2 class="h2 section-title text-center">Awesome Pricing Plan</h2>
+          <h2 class="h2 section-title text-center">Services We Provide</h2>
 
           <p class="section-text text-center">
-            Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua suspendisse
+          At Berkeley Barbershop, we're not just about haircuts; we're about the complete grooming experience. Our suite of services is meticulously designed to ensure every client leaves looking their sharpest and feeling their best.
           </p>
 
           <div class="pricing-tab-container">
@@ -614,115 +445,114 @@
           <div class="title-wrapper">
 
             <div>
-              <h2 class="h2 section-title">Latest Photo Gallery</h2>
+              <h2 class="h2 section-title">Photo Gallery</h2>
 
               <p class="section-text">
-                Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua
-                suspendisse
+              Step inside our gallery, where every photo tells a story of dedication and service to the community. At Berkeley Barbershop, we focus on the people, the conversations, and the trust built with every trim and shave. These snapshots capture the essence of our daily commitment to serving our community with skill and a smile.
               </p>
             </div>
 
-            <a href="#" class="btn has-before">
-              <span class="span">Explore More Gallery</span>
+            <a class="btn has-before" id="openGallery">
+                <span class="span">Explore More Gallery</span>
 
-              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
             </a>
 
           </div>
 
           <ul class="grid-list">
 
-            <li>
-              <div class="gallery-card">
+              <li>
+                  <div class="gallery-card" data-gallery-img="0">
 
-                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
-                  <img src="./assets/images/gallery-1.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
-                    class="img-cover">
-                </figure>
+                      <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                          <img src="./assets/images/gallery-1.jpg" width="422" height="550" loading="lazy" alt="Barber cutting hair"
+                          class="img-cover">
+                      </figure>
 
-                <div class="card-content">
+                      <div class="card-content">
 
-                  <h3 class="h3 card-title">Hair Cutting</h3>
+                          <h3 class="h3 card-title">Precision in every snip</h3>
 
-                  <p class="card-text">Barbers & Salon Services</p>
+                          <p class="card-text">Our seasoned barber at work</p>
 
-                  <a href="#" class="card-btn" aria-label="Read more">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                          <a class="card-btn" aria-label="Read more">
+                              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                          </a>
 
-                </div>
+                      </div>
 
-              </div>
-            </li>
+                  </div>
+              </li>
 
-            <li>
-              <div class="gallery-card">
+              <li>
+                  <div class="gallery-card" data-gallery-img="1">
 
-                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
-                  <img src="./assets/images/gallery-2.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
-                    class="img-cover">
-                </figure>
+                      <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                          <img src="./assets/images/gallery-2.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                          class="img-cover">
+                      </figure>
 
-                <div class="card-content">
+                      <div class="card-content">
 
-                  <h3 class="h3 card-title">Hair Cutting</h3>
+                          <h3 class="h3 card-title">Styling with care</h3>
 
-                  <p class="card-text">Barbers & Salon Services</p>
+                          <p class="card-text">Where every cut is a work of art</p>
 
-                  <a href="#" class="card-btn" aria-label="Read more">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                          <a class="card-btn" aria-label="Read more">
+                              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                          </a>
 
-                </div>
+                      </div>
 
-              </div>
-            </li>
+                  </div>
+              </li>
 
-            <li>
-              <div class="gallery-card">
+              <li>
+                  <div class="gallery-card" data-gallery-img="2">
 
-                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
-                  <img src="./assets/images/gallery-3.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
-                    class="img-cover">
-                </figure>
+                      <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                          <img src="./assets/images/gallery-3.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                          class="img-cover">
+                      </figure>
 
-                <div class="card-content">
+                      <div class="card-content">
 
-                  <h3 class="h3 card-title">Hair Cutting</h3>
+                          <h3 class="h3 card-title">Welcome to our barbershop</h3>
 
-                  <p class="card-text">Barbers & Salon Services</p>
+                          <p class="card-text">A cornerstone of the community since 1986</p>
 
-                  <a href="#" class="card-btn" aria-label="Read more">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                          <a class="card-btn" aria-label="Read more">
+                              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                          </a>
 
-                </div>
+                      </div>
 
-              </div>
-            </li>
+                  </div>
+              </li>
 
-            <li>
-              <div class="gallery-card">
+              <li>
+                  <div class="gallery-card" data-gallery-img="3">
 
-                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
-                  <img src="./assets/images/gallery-4.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
-                    class="img-cover">
-                </figure>
+                      <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                          <img src="./assets/images/gallery-4.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                          class="img-cover">
+                      </figure>
 
-                <div class="card-content">
+                      <div class="card-content">
 
-                  <h3 class="h3 card-title">Hair Cutting</h3>
+                          <h3 class="h3 card-title">Smiles with every style</h3>
 
-                  <p class="card-text">Barbers & Salon Services</p>
+                          <p class="card-text">Join the Berkeley Barbershop family</p>
 
-                  <a href="#" class="card-btn" aria-label="Read more">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                          <a class="card-btn" aria-label="Read more">
+                              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                          </a>
 
-                </div>
+                      </div>
 
-              </div>
-            </li>
+                  </div>
+              </li>
 
           </ul>
 
@@ -734,72 +564,72 @@
 
 
       <!-- 
-        - #APPOINTMENT
+          - #APPOINTMENT
       -->
 
       <section class="section appoin" id="appointment" aria-label="appointment">
-        <div class="container">
+          <div class="container">
 
-          <div class="appoin-card">
+              <div class="appoin-card">
 
-            <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
-              <img src="./assets/images/appoin-banner-1.jpg" width="250" height="774" loading="lazy" alt=""
-                class="img-cover">
-            </figure>
+                  <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
+                      <img src="./assets/images/appoin-banner-1.jpg" width="250" height="774" loading="lazy" alt=""
+                      class="img-cover">
+                  </figure>
 
-            <div class="card-content">
+                  <div class="card-content">
 
-              <h2 class="h2 section-title">Make Appointment</h2>
+                      <h2 class="h2 section-title">Make Appointment</h2>
 
-              <p class="section-text">
-                Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua
-                suspendisse
-              </p>
+                      <p class="section-text">
+                      Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua
+                      suspendisse
+                      </p>
 
-              <form action="" class="appoin-form">
+                      <form action="" class="appoin-form">
 
-                <div class="input-wrapper">
-                  <input type="text" name="name" placeholder="Your Full Name" required class="input-field">
+                          <div class="input-wrapper">
+                              <input type="text" name="name" placeholder="Your Full Name" required class="input-field">
 
-                  <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
-                </div>
+                              <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+                          </div>
 
-                <div class="input-wrapper">
-                  <input type="text" name="phone" placeholder="Phone Number" required class="input-field">
+                          <div class="input-wrapper">
+                              <input type="text" name="phone" placeholder="Phone Number" required class="input-field">
 
-                  <select name="category" class="input-field">
+                              <select name="category" class="input-field">
 
-                    <option value="Select category">Select category</option>
-                    <option value="Beauty & spa">Beauty & spa</option>
-                    <option value="Body massage">Body massage</option>
-                    <option value="Shaving & Facial">Shaving & Facial</option>
-                    <option value="Hair Color">Hair Color</option>
+                                  <option value="Select category">Select category</option>
+                                  <option value="Beauty & spa">Beauty & spa</option>
+                                  <option value="Body massage">Body massage</option>
+                                  <option value="Shaving & Facial">Shaving & Facial</option>
+                                  <option value="Hair Color">Hair Color</option>
 
-                  </select>
-                </div>
+                              </select>
+                          </div>
 
-                <input type="date" name="date" required class="input-field date">
+                          <input type="date" name="date" required class="input-field date">
 
-                <textarea name="message" placeholder="Write Message" required class="input-field"></textarea>
+                          <textarea name="message" placeholder="Write Message" required class="input-field"></textarea>
 
-                <button type="submit" class="form-btn">
-                  <span class="span">Appointment Now</span>
+                          <button type="submit" class="form-btn">
+                              <span class="span">Appointment Now</span>
 
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
+                              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                          </button>
 
-              </form>
+                      </form>
 
-            </div>
+                  </div>
 
-            <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
-              <img src="./assets/images/appoin-banner-2.jpg" width="250" height="774" loading="lazy" alt=""
-                class="img-cover">
-            </figure>
+                  <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
+                      <img src="./assets/images/appoin-banner-2.jpg" width="250" height="774" loading="lazy" alt=""
+                      class="img-cover">
+                  </figure>
+
+              </div>
 
           </div>
-
-        </div>
       </section>
 
     </article>
@@ -810,192 +640,134 @@
 
 
   <!-- 
-    - #FOOTER
+      - #FOOTER
   -->
 
   <footer class="footer has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
-    <div class="container">
+      <div class="container">
 
-      <div class="footer-top">
+          <div class="footer-top">
 
-        <div class="footer-brand">
+              <!--
+                  <div class="footer-brand">
 
-          <a href="#" class="logo">
-            Barber
-            <span class="span">Hair Salon</span>
-          </a>
-
-          <form action="" class="input-wrapper">
-
-            <input type="email" name="email_address" placeholder="Enter Your Email" required class="email-field">
-
-            <button type="submit" class="btn has-before">
-              <span class="span">Subscribe Now</span>
-
-              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-            </button>
-
-          </form>
-
-        </div>
-
-        <div class="footer-link-box">
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Quick Links</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Our Services</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Meet Our Team</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Our Portfolio</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Need A Career?</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">News & Blog</a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Services</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Hair Cutting</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Shaving & Design</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Hair Colors</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Beauty & Spa</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link has-before">Body Massages</a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Recent News</p>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder" style="--width: 70; --height: 75;">
-                  <img src="./assets/images/footer-blog-1.jpg" width="70" height="75" loading="lazy"
-                    alt="The beginners guide to Henna Brows in Brisbane" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-                  <h3>
-                    <a href="#" class="card-title">The beginners guide to Henna Brows in Brisbane</a>
-                  </h3>
-
-                  <div class="card-date">
-                    <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                    <time datetime="2022-08-25">25 August 2022</time>
-                  </div>
-                </div>
+                  <a href="#" class="logo">
+                      Berkeley<br>Barbershop
+                  </a>
 
               </div>
-            </li>
+              -->
 
-            <li>
-              <div class="blog-card">
+              <div class="footer-link-box">
 
-                <figure class="card-banner img-holder" style="--width: 70; --height: 75;">
-                  <img src="./assets/images/footer-blog-2.jpg" width="70" height="75" loading="lazy"
-                    alt="How do I get rid of unwanted hair on my face?" class="img-cover">
-                </figure>
+                  <ul class="footer-list">
 
-                <div class="card-content">
-                  <h3>
-                    <a href="#" class="card-title">How do I get rid of unwanted hair on my face?</a>
-                  </h3>
+                      <li>
+                          <p class="footer-list-title">Quick Links</p>
+                      </li>
 
-                  <div class="card-date">
-                    <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                      <li>
+                          <a href="#about" class="footer-link has-before">About Us</a>
+                      </li>
 
-                    <time datetime="2022-08-25">25 August 2022</time>
-                  </div>
-                </div>
+                      <li>
+                          <a href="#services" class="footer-link has-before">Our Services</a>
+                      </li>
+
+                      <li>
+                          <a href="#gallery" class="footer-link has-before">Gallery</a>
+                      </li>
+
+                      <li>
+                          <a href="#reviews" class="footer-link has-before">Reviews</a>
+                      </li>
+
+                      <li>
+                          <a href="#" class="footer-link has-before">Schedule an Appointment</a>
+                      </li>
+
+                  </ul>
+
+                  <ul class="footer-list">
+
+                      <li>
+                          <p class="footer-list-title">Services</p>
+                      </li>
+
+                      <li>
+                          <a href="#services" class="footer-link has-before">Hair Cutting</a>
+                      </li>
+
+                      <li>
+                          <a href="#services" class="footer-link has-before">Shaving & Design</a>
+                      </li>
+
+                      <li>
+                          <a href="#services" class="footer-link has-before">Hair Colors</a>
+                      </li>
+
+                      <li>
+                          <a href="#services" class="footer-link has-before">Beauty & Spa</a>
+                      </li>
+
+                      <li>
+                          <a href="#services" class="footer-link has-before">Body Massages</a>
+                      </li>
+
+                  </ul>
+
+                  <ul class="footer-list">
+
+                      <li>
+                          <p class="footer-list-title">Our Barbershop</p>
+                      </li>
+
+                      <img src="./assets/images/berkeley_barbershop.jpg" height="250" width="250">
+                  </ul>
+
+                  <ul class="footer-list">
+
+                      <li>
+                          <p class="footer-list-title">Contact Us</p>
+                      </li>
+
+                      <li class="footer-list-item">
+                          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+                          <address class="contact-link">
+                              <a href="https://www.mapquest.com/us/new-jersey/berkeley-barber-shop-917459">493 Springfield Ave Berkeley Heights, NJ 07922</a>
+                          </address>
+                      </li>
+
+                      <li class="footer-list-item">
+                          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+                          <a href="tel:+19084641166" class="contact-link">(908) 464-1166</a>
+                      </li>
+
+                      <li class="footer-list-item">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                          <span class="contact-link">
+                              Monday - Friday: 8 AM - 6 PM<br>
+                              Saturday: 8 AM - 5 PM<br>
+                            Sunday: 10 AM - 3 PM
+                          </span>
+                      </li>
+
+                  </ul>
 
               </div>
-            </li>
 
-          </ul>
+          </div>
 
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Contact Us</p>
-            </li>
-
-            <li class="footer-list-item">
-              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-
-              <address class="contact-link">
-                7528 Roberts Ave. Palm Bay, FL 32907
-              </address>
-            </li>
-
-            <li class="footer-list-item">
-              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-
-              <a href="tel:+0123456789" class="contact-link">+012 (345) 67 89</a>
-            </li>
-
-            <li class="footer-list-item">
-              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-              <span class="contact-link">Sun - Friday, 08 am - 09 pm</span>
-            </li>
-
-            <li class="footer-list-item">
-              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-              <a href="mailto:support@gmail.com" class="contact-link">support@gmail.com</a>
-            </li>
-
-          </ul>
-
-        </div>
+          <div class="footer-bottom">
+              <p class="copyright">
+              &copy; 2024 <a href="https://www.lanthiamedia.com" class="copyright-link">lanthiamedia.com</a>. All Rights Reserved.
+              </p>
+          </div>
 
       </div>
-
-      <div class="footer-bottom">
-        <p class="copyright">
-          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved.
-        </p>
-      </div>
-
-    </div>
   </footer>
 
 
@@ -1003,27 +775,27 @@
 
 
   <!-- 
-    - #BACK TO TOP
+      - #BACK TO TOP
   -->
 
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
 
-
-
-
+  <!-- Gallery plugin -->
+  <script src="assets/js/fslightbox.js"></script>
 
   <!-- 
-    - custom js link
+      - custom js link
   -->
   <script src="./assets/js/script.js" defer></script>
 
   <!-- 
-    - ionicon link
+      - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 

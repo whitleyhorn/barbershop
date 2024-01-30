@@ -1,6 +1,26 @@
 'use strict';
 
+/**
+    * Display Today's Hours
+ */
+const openHours = {
+    "Monday": "8 AM - 6 PM",
+    "Tuesday": "8 AM - 6 PM",
+    "Wednesday": "8 AM - 6 PM",
+    "Thursday": "8 AM - 6 PM",
+    "Friday": "8 AM - 6 PM",
+    "Saturday": "8 AM - 5 PM",
+    "Sunday": "10 AM - 3 PM"
+};
 
+document.addEventListener("DOMContentLoaded", function() {
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    var currentDay = days[new Date().getDay()];
+    var todayHours = openHours[currentDay];
+
+    document.getElementById("today-hours").textContent = todayHours;
+});
 
 /**
  * add event on element
@@ -88,3 +108,40 @@ const filter = function () {
 }
 
 addEventOnElem(filterBtns, "click", filter);
+
+/**
+    * Gallery
+    */
+
+document.addEventListener('DOMContentLoaded', function() {
+    var lightbox = new FsLightbox();
+    lightbox.props.sources = [];
+
+    for (let i = 1; i <= 20; i++) {
+        lightbox.props.sources.push(`./assets/images/gallery-${i}.jpg`);
+    }
+    document.getElementById('openGallery').addEventListener('click', () => {
+        lightbox.open(1);
+    });
+
+    // Get all elements with the class 'data-gallery-img'
+    var galleryItems = document.querySelectorAll('[data-gallery-img]');
+
+
+    // Loop over each gallery item
+    galleryItems.forEach(function(item) {
+      // Set an onclick event handler for each item
+      item.onclick = function() {
+        // Retrieve the value of 'data-gallery-img'
+        var imgIndex = this.getAttribute('data-gallery-img');
+          console.log(imgIndex);
+        
+        // Assuming lightbox.open() accepts an index as an argument
+        // Convert imgIndex to an integer if necessary
+        lightbox.open(parseInt(imgIndex));
+      };
+    });
+})
+
+
+
