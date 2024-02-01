@@ -7,6 +7,7 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.cdnfonts.com/css/palatino');
 
 
 
@@ -45,8 +46,8 @@
  * typography
  */
 
---ff-oswald : 'EB Garamond', serif; 
---ff-rubik : 'EB Garamond', serif; 
+--header-font : 'Palatino', sans-serif; 
+--ff-body-font : 'EB Garamond', serif; 
 
 --fs-40: 4rem;
 --fs-30: 3rem;
@@ -145,7 +146,7 @@
   address { font-style: normal; }
 
   html {
-    font-family: var(--ff-rubik);
+    font-family: var(--ff-body-font);
     font-size: 10px;
     scroll-behavior: smooth;
   }
@@ -200,7 +201,7 @@
 .h1,
 .h2,
 .h3 {
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   line-height: 1.3;
 }
 
@@ -230,7 +231,7 @@
   gap: 10px;
   max-width: max-content;
   padding: 10px 25px;
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-size: var(--fs-14);
   font-weight: var(--fw-600);
   text-transform: uppercase;
@@ -347,7 +348,7 @@
 
 .logo {
   color: var(--indian-yellow);
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-size: 2.7rem;
   font-weight: var(--fw-600);
   text-transform: uppercase;
@@ -356,7 +357,7 @@
 
 .logo .span {
   color: var(--white);
-  font-family: var(--ff-rubik);
+  font-family: var(--ff-body-font);
   font-size: 1.3rem;
   font-weight: var(--fw-300);
   text-transform: capitalize;
@@ -394,7 +395,7 @@
 
 .navbar-link {
   color: var(--white);
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-weight: var(--fw-600);
   text-transform: uppercase;
   line-height: 1.5;
@@ -588,7 +589,7 @@
 
 .filter-btn {
   color: var(--eerie-black-1);
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-size: var(--fs-14);
   font-weight: var(--fw-600);
   text-transform: uppercase;
@@ -641,7 +642,7 @@
 
 .pricing-card .card-price {
   color: var(--indian-yellow);
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-size: var(--fs-30);
   font-weight: var(--fw-500);
 }
@@ -774,14 +775,14 @@ select.input-field { appearance: none; }
 select.input-field,
 .input-field::placeholder,
 .input-field.date {
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   color: var(--eerie-black-1);
   font-weight: var(--fw-500);
 }
 
 .input-field > option {
   color: var(--sonic-silver);
-  font-family: var(--ff-rubik);
+  font-family: var(--ff-body-font);
 }
 
 .input-field.date { text-transform: uppercase; }
@@ -798,7 +799,7 @@ textarea.input-field {
 
 .form-btn {
   color: var(--white);
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-size: var(--fs-14);
   font-weight: var(--fw-500);
   text-transform: uppercase;
@@ -872,7 +873,7 @@ textarea.input-field {
 
 .footer-list-title {
   color: var(--white);
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-size: var(--fs-18);
   font-weight: var(--fw-600);
   text-transform: uppercase;
@@ -916,7 +917,7 @@ textarea.input-field {
 
 .blog-card .card-title {
   color: var(--white);
-  font-family: var(--ff-oswald);
+  font-family: var(--header-font);
   font-size: var(--fs-14);
   font-weight: var(--fw-500);
   line-height: 1.5;
