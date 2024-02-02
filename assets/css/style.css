@@ -660,50 +660,60 @@
 
 .gallery .section-text { margin-block: 12px 15px; }
 
-.gallery-card { position: relative; }
-
-.gallery-card .card-banner .img-cover { transition: var(--transition-2); }
-
-.gallery-card:is(:hover, :focus-within) .card-banner .img-cover { transform: scale(1.1); }
-
-.gallery-card .card-content {
-  padding: 10px;
-  text-align: center;
-  position: absolute;
-  inset: 15px;
-  background-color: var(--eerie-black-2_85);
+.slider {
+  width: 100%;
+  max-width: 670px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: var(--transition-2);
+  justify-content: center; /* Center slides horizontally */
+  align-items: center; /* Center slides vertically */
+  background: black;
 }
 
-.gallery-card:is(:hover, :focus-within) .card-content {
-  opacity: 1;
-  transform: scale(1);
+.slide {
+  display: flex; /* Added to center the image in the slide */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Takes full width of the slider */
+  position: absolute;
+  transition: all 0.5s;
 }
 
-.gallery-card :is(.card-title, .card-text) { color: var(--white); }
+.slide img {
+  max-width: 100%; /* Ensures image does not exceed the slide width */
+  max-height: 100%; /* Ensures image does not exceed the slide height */
+  object-fit: contain; /* Ensures full image is visible, may introduce letterboxing */
+  max-height: 500px;
+}
 
-.gallery-card .card-btn {
-  background-color: var(--white);
-  color: var(--indian-yellow);
+/* Keep your .slide-btn, .btn-prev, .btn-next styles unchanged */
+
+
+.slide-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
   font-size: 18px;
-  padding: 16px;
-  border-radius: var(--radius-5);
-  margin-block-start: 12px;
-  transition: var(--transition-1);
+}
+.slide-btn:active {
+  transform: scale(1.1);
 }
 
-.gallery-card .card-btn:is(:hover, :focus) {
-  background-color: var(--indian-yellow);
-  color: var(--white);
+.btn-prev {
+  top: 45%;
+  left: 2%;
 }
 
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
 
 /*-----------------------------------*\
 #MODAL
@@ -1243,8 +1253,6 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
 .gallery .section-text { margin-inline: 0; }
 
-.gallery-card .card-content { inset: 30px; }
-
 
 
 /**
@@ -1362,6 +1370,10 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.gallery .title-wrapper div:first-child {
+    align-self: flex-start;
 }
 
 .gallery .section-text { margin-block-end: 0; }

@@ -113,35 +113,88 @@ addEventOnElem(filterBtns, "click", filter);
     * Gallery
     */
 
-document.addEventListener('DOMContentLoaded', function() {
-    var lightbox = new FsLightbox();
-    lightbox.props.sources = [];
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+// Select the slider container
+const slider = document.querySelector(".slider");
 
-    for (let i = 1; i <= 20; i++) {
-        lightbox.props.sources.push(`./assets/images/gallery-${i}.jpg`);
+// Maximum height for the slider container
+const maxSliderHeight = 500; // pixels
+
+// Function to adjust the slider height based on the current image
+function adjustSliderHeight(slide) {
+  const img = slide.querySelector('img'); // Get the image within the slide
+  
+  const updateHeight = () => {
+    const aspectRatio = img.naturalHeight / img.naturalWidth;
+    const sliderWidth = slider.offsetWidth;
+    let newHeight = sliderWidth * aspectRatio; // Calculate the new height based on aspect ratio
+    
+    // Enforce the maximum height limit
+    if (newHeight > maxSliderHeight) {
+      newHeight = maxSliderHeight;
     }
-    document.getElementById('openGallery').addEventListener('click', () => {
-        lightbox.open(1);
-    });
+    
+    slider.style.height = `${newHeight}px`; // Adjust the slider height
+  };
+  
+  if (img.complete) {
+    updateHeight();
+  } else {
+    img.onload = updateHeight; // Ensure the image is loaded before calculating
+  }
+}
 
-    // Get all elements with the class 'data-gallery-img'
-    var galleryItems = document.querySelectorAll('[data-gallery-img]');
+// Loop through slides and set each slide's translateX
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
 
+// Select next and previous slide buttons
+const nextSlide = document.querySelector(".btn-next");
+const prevSlide = document.querySelector(".btn-prev");
 
-    // Loop over each gallery item
-    galleryItems.forEach(function(item) {
-      // Set an onclick event handler for each item
-      item.onclick = function() {
-        // Retrieve the value of 'data-gallery-img'
-        var imgIndex = this.getAttribute('data-gallery-img');
-          console.log(imgIndex);
-        
-        // Assuming lightbox.open() accepts an index as an argument
-        // Convert imgIndex to an integer if necessary
-        lightbox.open(parseInt(imgIndex));
-      };
-    });
-})
+// Current slide counter
+let curSlide = 0;
+// Maximum number of slides
+let maxSlide = slides.length - 1;
 
+// Add event listener and navigation functionality for the next button
+nextSlide.addEventListener("click", function () {
+  // Check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
 
+  // Move slide
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+
+  // Adjust slider height for the new current slide
+  adjustSliderHeight(slides[curSlide]);
+});
+
+// Add event listener and navigation functionality for the previous button
+prevSlide.addEventListener("click", function () {
+  // Check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  // Move slide
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+
+  // Adjust slider height for the new current slide
+  adjustSliderHeight(slides[curSlide]);
+});
+
+// Initial adjustment for the first slide
+adjustSliderHeight(slides[0]);
 
