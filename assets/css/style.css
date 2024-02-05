@@ -682,7 +682,7 @@
 }
 
 .pricing-card .card-price {
-  color: var(--black_30);
+  color: var(--light-gray-green);
   font-family: var(--header-font);
   font-size: var(--fs-30);
   font-weight: var(--fw-500);
@@ -1462,7 +1462,11 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
 .appoin-card .card-content { flex-grow: 1; }
 
+/**
+ * REVIEWS
+ */
 
+.reviews { padding-top: 0; }
 
 /**
  * FOOTER

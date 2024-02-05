@@ -32,7 +32,13 @@ const addEventOnElem = function (elem, type, callback) {
       elem[i].addEventListener(type, callback);
     }
   } else {
-    elem.addEventListener(type, callback);
+      try {
+        elem.addEventListener(type, callback);
+      } catch (e) {
+          console.error(e);
+          console.trace();
+          console.log(elem, type);
+      }
   }
 }
 
