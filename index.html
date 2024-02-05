@@ -31,7 +31,7 @@
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="./assets/images/berkeley_barbershop.jpg">
 
 </head>
 
@@ -80,56 +80,6 @@
       </div>
     </div>
 
-    <div class="header-bottom" data-header>
-      <div class="container">
-
-        <a href="#" class="logo">
-            Berkeley<br>
-          Barbershop
-        </a>
-
-        <nav class="navbar container" data-navbar>
-          <ul class="navbar-list">
-
-            <li class="navbar-item">
-              <a href="#" class="navbar-link" data-nav-link>Home</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#about" class="navbar-link" data-nav-link>About</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#services" class="navbar-link" data-nav-link>Services</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#gallery" class="navbar-link" data-nav-link>Gallery</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#reviews" class="navbar-link" data-nav-link>Reviews</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
-            </li>
-
-          </ul>
-        </nav>
-
-        <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-        </button>
-
-        <a href="#" class="btn has-before">
-          <span class="span">Appointment</span>
-
-          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-        </a>
-
-      </div>
-    </div>
 
   </header>
 
@@ -139,54 +89,62 @@
 
   <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="section hero has-before has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./assets/images/hero-banner.jpg')">
+      <div style="background-image: url('./assets/images/berkeley_barbershop.jpg');" class="new-header has-before">
+        <div class="title-group">
+            <div class="title-container top-line-container">
+                <span class="line"></span>
+                <img src="./assets/images/scissors.png" class="scissors" alt="Scissors">
+                <span class="line"></span>
+            </div>
+            <div class="subtitle-container">
+                <h2>Berkeley Barber Shop</h2>
+                <h2>Placeholder Text</h2>
+            </div>
+            <div class="title-container">
+                <h1>STYLISH. TRENDY. REFRESHING.</h1>
+            </div>
+            <div class="title-container">
+                <span class="line"></span>
+            </div>
+            <div class="title-container">
+                <h2 class="italic-subtitle">Established in the heart of Berkeley Heights since 1986</h2>
+            </div>
+        </div>
+    </div>
+    <nav class="new-navbar" data-navbar>
+        <div class="nav-item-container">
+            <a href="#services" class="nav-item" data-nav-link>Services</a>
+            <a href="#gallery" class="nav-item" data-nav-link>Gallery<a>
+            <img src="./assets/images/black_scissors.png" class="nav-scissors" alt="Scissors">
+            <a href="#reviews" class="nav-item" data-nav-link>Reviews</a>
+            <a href="#footer" class="nav-item" data-nav-link>Contact</a>
+        </div>
+        <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+    </nav>
+    <section class="section about" id="about" aria-label="about">
         <div class="container">
-
-            <h1 class="h1 hero-title">Stylish.<br>Trendy.<br>Refreshing.</h1>
-
-          <p class="hero-text">
-            Established in the heart of Berkeley Heights since 1986.
-          </p>
-
-          <a href="#services" class="btn has-before">
-            <span class="span">Explore Our Services</span>
-
-            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-          </a>
+            <h2 class="h2 section-title text-center">About Us</h2>
+            <div class="image-text-container">
+                <div class="image-container">
+                    <img src="assets/images/man_getting_haircut.webp" alt="Man getting a haircut">
+                </div>
+                <div class="text-container">
+                    <p class="section-text">
+                    Welcome to Berkeley Barber Shop, an icon of <b>Berkeley Heights, New Jersey</b> since 1954. With a rich legacy deeply rooted in our community, we take pride in redefining and elevating personal style. Our skilled barbers, with decades of experience, provide precision cuts that stand the test of time. At Berkeley Barber Shop, we go beyond grooming – we craft personalized experiences that amplify your confidence. Step into a tradition of excellence, where classic meets contemporary, and let us redefine your style journey.
+                    </p>
+                </div>
+            </div>
 
         </div>
-      </section>
-
-
-      <section class="section about" id="about" aria-label="about">
-          <div class="container">
-              <h2 class="h2 section-title text-center">About Us</h2>
-              <div class="image-text-container">
-                  <div class="image-container">
-                      <img src="assets/images/man_getting_haircut.webp" alt="Man getting a haircut">
-                  </div>
-                  <div class="text-container">
-                      <p class="section-text">
-                      Welcome to Berkeley Barber Shop, an icon of <b>Berkeley Heights, New Jersey</b> since 1986. With a rich legacy deeply rooted in our community, we take pride in redefining and elevating personal style. Our skilled barbers, with decades of experience, provide precision cuts that stand the test of time. At Berkeley Barber Shop, we go beyond grooming – we craft personalized experiences that amplify your confidence. Step into a tradition of excellence, where classic meets contemporary, and let us redefine your style journey.
-                      </p>
-                  </div>
-              </div>
-
-          </div>
-      </section>
+    </section>
 
       <!-- 
         - #PRICING
       -->
 
-      <section class="section pricing has-bg-image has-before" id="services" aria-label="services"
-        style="background-image: url('./assets/images/pricing-bg.jpg')">
+      <section class="section pricing has-bg-image has-before" id="services" aria-label="services">
         <div class="container">
 
           <h2 class="h2 section-title text-center">Services We Provide</h2>
@@ -196,70 +154,6 @@
           </p>
 
           <div class="pricing-tab-container">
-
-            <ul class="tab-filter">
-
-              <li>
-                <button class="filter-btn active" data-filter-btn="all">
-                  <div class="btn-icon">
-                    <i class="flaticon-beauty-salon" aria-hidden="true"></i>
-                  </div>
-
-                  <p class="btn-text">All Pricing</p>
-                </button>
-              </li>
-
-              <li>
-                <button class="filter-btn" data-filter-btn="beauty-spa">
-                  <div class="btn-icon">
-                    <i class="flaticon-relax" aria-hidden="true"></i>
-                  </div>
-
-                  <p class="btn-text">Beauty & Spa</p>
-                </button>
-              </li>
-
-              <li>
-                <button class="filter-btn" data-filter-btn="body-treatments">
-                  <div class="btn-icon">
-                    <i class="flaticon-massage" aria-hidden="true"></i>
-                  </div>
-
-                  <p class="btn-text">Body Treatments</p>
-                </button>
-              </li>
-
-              <li>
-                <button class="filter-btn" data-filter-btn="face-washing">
-                  <div class="btn-icon">
-                    <i class="flaticon-spa" aria-hidden="true"></i>
-                  </div>
-
-                  <p class="btn-text">Face Washing</p>
-                </button>
-              </li>
-
-              <li>
-                <button class="filter-btn" data-filter-btn="meditations">
-                  <div class="btn-icon">
-                    <i class="flaticon-yoga" aria-hidden="true"></i>
-                  </div>
-
-                  <p class="btn-text">Meditations</p>
-                </button>
-              </li>
-
-              <li>
-                <button class="filter-btn" data-filter-btn="shaving">
-                  <div class="btn-icon">
-                    <i class="flaticon-razor-blade" aria-hidden="true"></i>
-                  </div>
-
-                  <p class="btn-text">Shaving</p>
-                </button>
-              </li>
-
-            </ul>
 
             <ul class="grid-list">
 
@@ -447,83 +341,83 @@
             <div class="slider">
                 <!-- Slides -->
                 <div class="slide">
-                    <img src="./assets/images/gallery-1.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-1.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-2.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-2.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-3.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-3.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-4.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-4.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-5.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-5.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-6.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-6.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-7.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-7.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-8.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-8.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-9.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-9.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-10.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-10.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-11.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-11.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-12.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-12.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-13.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-13.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-14.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-14.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-15.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-15.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-16.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-16.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-17.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-17.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-18.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-18.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-19.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-19.jpg" alt="" />
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/images/gallery-20.jpg" alt="" />
+                    <img loading="lazy" src="./assets/images/gallery-20.jpg" alt="" />
                 </div>
 
 
@@ -622,7 +516,7 @@
       - #FOOTER
   -->
 
-  <footer class="footer has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+  <footer id="footer" class="has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
       <div class="container">
 
           <div class="footer-top">
@@ -701,7 +595,7 @@
                           <p class="footer-list-title">Our Barbershop</p>
                       </li>
 
-                      <img src="./assets/images/berkeley_barbershop.jpg" height="250" width="250">
+                      <img src="./assets/images/berkeley_barbershop_small.jpg" height="250" width="250">
                   </ul>
 
                   <ul class="footer-list">
@@ -740,7 +634,7 @@
 
           </div>
 
-          <div class="footer-bottom">
+          <div class="footer-bottom has-before">
               <p class="copyright">
               &copy; 2024 <a href="https://www.lanthiamedia.com" class="copyright-link">lanthiamedia.com</a>. All Rights Reserved.
               </p>
