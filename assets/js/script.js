@@ -114,90 +114,54 @@ addEventOnElem(filterBtns, "click", filter);
 
 /**
     * Gallery
-    */
+*/
 
-// Select all slides
-const slides = document.querySelectorAll(".slide");
-// Select the slider container
-const slider = document.querySelector(".slider");
+// Get references to DOM elements
+const carousel = document.getElementById('carousel');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
 
-// Maximum height for the slider container
-const maxSliderHeight = 500; // pixels
+// Calculate the width of a single item
+const itemWidth = () => {
+  const item = carousel.querySelector('.item');
+  return item.offsetWidth; // Includes the item's width only
+};
 
-// Function to adjust the slider height based on the current image
-function adjustSliderHeight(slide) {
-  const img = slide.querySelector('img'); // Get the image within the slide
-  
-  const updateHeight = () => {
-    const aspectRatio = img.naturalHeight / img.naturalWidth;
-    const sliderWidth = slider.offsetWidth;
-    let newHeight = sliderWidth * aspectRatio; // Calculate the new height based on aspect ratio
-    
-    // Enforce the maximum height limit
-    if (newHeight > maxSliderHeight) {
-      newHeight = maxSliderHeight;
-    }
-    
-    slider.style.height = `${newHeight}px`; // Adjust the slider height
-  };
-  
-  if (img.complete) {
-    updateHeight();
-  } else {
-    img.onload = updateHeight; // Ensure the image is loaded before calculating
-  }
-}
+// Assuming a fixed number of visible items and fixed space between items
+const visibleItemCount = 3; // Number of items you want to show at a time
+const spaceBetweenItems = 16; // Adjust the space between items as needed
 
-// Loop through slides and set each slide's translateX
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
+// Calculate the total width to scroll for 3 items
+const totalScrollWidth = () => (itemWidth() + spaceBetweenItems) * visibleItemCount;
+
+// Update arrow visibility based on the current state
+const updateArrows = () => {
+  const totalItems = carousel.querySelectorAll('.item').length;
+  const maxFirstItemIndex = totalItems - visibleItemCount;
+  prev.style.display = firstVisibleItemIndex > 0 ? 'flex' : 'none';
+  next.style.display = firstVisibleItemIndex < maxFirstItemIndex ? 'flex' : 'none';
+};
+
+// Track the index of the leftmost item in the viewport
+let firstVisibleItemIndex = 0;
+
+// Event listeners for buttons
+next.addEventListener('click', () => {
+  // Calculate the number of items to scroll without exceeding the total number of items
+  const maxScrollIndex = carousel.querySelectorAll('.item').length - visibleItemCount;
+  const itemsToScroll = Math.min(visibleItemCount, maxScrollIndex - firstVisibleItemIndex);
+  carousel.scrollBy(totalScrollWidth(), 0);
+  firstVisibleItemIndex = Math.min(firstVisibleItemIndex + itemsToScroll, maxScrollIndex);
+  updateArrows();
 });
 
-// Select next and previous slide buttons
-const nextSlide = document.querySelector(".btn-next");
-const prevSlide = document.querySelector(".btn-prev");
-
-// Current slide counter
-let curSlide = 0;
-// Maximum number of slides
-let maxSlide = slides.length - 1;
-
-// Add event listener and navigation functionality for the next button
-nextSlide.addEventListener("click", function () {
-  // Check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  }
-
-  // Move slide
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-
-  // Adjust slider height for the new current slide
-  adjustSliderHeight(slides[curSlide]);
+prev.addEventListener('click', () => {
+  const itemsToScroll = Math.min(visibleItemCount, firstVisibleItemIndex);
+  carousel.scrollBy(-totalScrollWidth(), 0);
+  firstVisibleItemIndex = Math.max(firstVisibleItemIndex - itemsToScroll, 0);
+  updateArrows();
 });
 
-// Add event listener and navigation functionality for the previous button
-prevSlide.addEventListener("click", function () {
-  // Check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide--;
-  }
-
-  // Move slide
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-
-  // Adjust slider height for the new current slide
-  adjustSliderHeight(slides[curSlide]);
-});
-
-// Initial adjustment for the first slide
-adjustSliderHeight(slides[0]);
-
+// Initial arrow state update and resize event listener
+updateArrows();
+window.addEventListener('resize', updateArrows);

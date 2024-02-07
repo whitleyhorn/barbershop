@@ -72,6 +72,7 @@
  */
 
 --section-padding: 80px;
+--gap: 16px;
 
 /**
  * shadow
@@ -700,60 +701,70 @@
 
 .gallery .section-text { margin-block: 12px 15px; }
 
-.slider {
+#wrapper {
+  display: flex; /* Use flexbox for the wrapper */
+  justify-content: space-between; /* This will position the prev and next at the ends */
+  align-items: center; /* This will vertically center the content */
   width: 100%;
-  max-width: 670px;
-  position: relative;
   overflow: hidden;
-  border-radius: 15px;
+}
+
+#carousel {
   display: flex;
-  justify-content: center; /* Center slides horizontally */
-  align-items: center; /* Center slides vertically */
-  background: black;
+  flex-wrap: nowrap;
+  overflow: auto;
+  scroll-behavior: smooth;
+  flex-grow: 1; /* Allows the carousel to expand and fill the space between buttons */
+  margin: 0 16px; /* Add some margin between the arrows and the carousel */
 }
 
-.slide {
-  display: flex; /* Added to center the image in the slide */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: 100%; /* Takes full width of the slider */
-  position: absolute;
-  transition: all 0.5s;
-}
-
-.slide img {
-  max-width: 100%; /* Ensures image does not exceed the slide width */
-  max-height: 100%; /* Ensures image does not exceed the slide height */
-  object-fit: contain; /* Ensures full image is visible, may introduce letterboxing */
-  max-height: 500px;
-}
-
-/* Keep your .slide-btn, .btn-prev, .btn-next styles unchanged */
-
-
-.slide-btn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: var(--black);
   border: none;
+  padding: 8px;
   border-radius: 50%;
+  outline: 0;
   cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
-}
-.slide-btn:active {
-  transform: scale(1.1);
+  z-index: 10; /* Ensure the buttons are above other elements if needed */
+  position: absolute;
+  opacity: 0.4;
 }
 
-.btn-prev {
-  top: 45%;
-  left: 2%;
+#prev {
+  left: 5%; 
 }
 
-.btn-next {
-  top: 45%;
-  right: 2%;
+#next {
+  right: 5%;
 }
+
+#content {
+  display: flex; /* Changed to flex to better control the items */
+  gap: var(--gap); /* Spacing between the items */
+}
+
+.item {
+  flex: 0 0 calc((100% - (2 * var(--gap))) / 3);
+  height: 350px; /* Or whatever height you desire */
+  width: calc((100% - 2 * var(--gap)) / 3); /* Adjust this to fit three items */
+  object-fit: contain; /* Keep the aspect ratio of the images */
+}
+
+
+/* Hide the scrollbar */
+#carousel::-webkit-scrollbar {
+  display: none;
+}
+
+#carousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 
 /*-----------------------------------*\
 #MODAL
