@@ -127,8 +127,7 @@ const itemWidth = () => {
   return item.offsetWidth; // Includes the item's width only
 };
 
-// Assuming a fixed number of visible items and fixed space between items
-const visibleItemCount = 3; // Number of items you want to show at a time
+const visibleItemCount = (window.innerWidth < 768) ? 2 : 3; // Number of items you want to show at a time
 const spaceBetweenItems = 16; // Adjust the space between items as needed
 
 // Calculate the total width to scroll for 3 items

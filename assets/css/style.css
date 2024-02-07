@@ -73,6 +73,12 @@
 
 --section-padding: 80px;
 --gap: 16px;
+--visible-item-count: 3;
+
+@media (max-width: 767px) {
+    --visible-item-count: 2;
+}
+
 
 /**
  * shadow
@@ -748,9 +754,9 @@
 }
 
 .item {
-  flex: 0 0 calc((100% - (2 * var(--gap))) / 3);
+  flex: 0 0 calc((100% - (2 * var(--gap))) / var(--visible-item-count));
   height: 350px; /* Or whatever height you desire */
-  width: calc((100% - 2 * var(--gap)) / 3); /* Adjust this to fit three items */
+  width: calc((100% - 2 * var(--gap)) / var(--visible-item-count)); /* Adjust this to fit three items */
   object-fit: contain; /* Keep the aspect ratio of the images */
 }
 
