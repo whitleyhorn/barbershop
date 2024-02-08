@@ -1,5 +1,7 @@
 'use strict';
 
+let currentLang = "en"; // default language
+
 /**
     * Display Today's Hours
  */
@@ -81,86 +83,107 @@ addEventOnElem(window, "scroll", backTopActive);
 
 
 /**
- * filter function
- */
-
-const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll("[data-filter]");
-
-let lastClickedFilterBtn = filterBtns[0];
-
-const filter = function () {
-  lastClickedFilterBtn.classList.remove("active");
-  this.classList.add("active");
-  lastClickedFilterBtn = this;
-
-  for (let i = 0; i < filterItems.length; i++) {
-    if (this.dataset.filterBtn === filterItems[i].dataset.filter ||
-      this.dataset.filterBtn === "all") {
-
-      filterItems[i].style.display = "block";
-      filterItems[i].classList.add("active");
-
-    } else {
-
-      filterItems[i].style.display = "none";
-      filterItems[i].classList.remove("active");
-
-    }
-  }
-}
-
-addEventOnElem(filterBtns, "click", filter);
-
-/**
     * Gallery
 */
 
-// Get references to DOM elements
-const carousel = document.getElementById('carousel');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
+// Utility function to initialize carousel controls
+function initializeCarouselControls() {
+    let currentCarousel = document.querySelector('.carousel[data-language="en"]'); // Start with English by default
 
-// Calculate the width of a single item
-const itemWidth = () => {
-  const item = carousel.querySelector('.item');
-  return item.offsetWidth; // Includes the item's width only
-};
+    const getVisibleItemsCount = () => (window.innerWidth < 768) ? 2 : 3;
+    const spaceBetweenItems = 16;
 
-const visibleItemCount = (window.innerWidth < 768) ? 2 : 3; // Number of items you want to show at a time
-const spaceBetweenItems = 16; // Adjust the space between items as needed
+    const getItemWidth = () => {
+        const item = currentCarousel.querySelector('.item:not(.hide)');
+        return item ? item.offsetWidth : 0;
+    };
 
-// Calculate the total width to scroll for 3 items
-const totalScrollWidth = () => (itemWidth() + spaceBetweenItems) * visibleItemCount;
+    const getTotalScrollWidth = () => (getItemWidth() + spaceBetweenItems) * getVisibleItemsCount();
 
-// Update arrow visibility based on the current state
-const updateArrows = () => {
-  const totalItems = carousel.querySelectorAll('.item').length;
-  const maxFirstItemIndex = totalItems - visibleItemCount;
-  prev.style.display = firstVisibleItemIndex > 0 ? 'flex' : 'none';
-  next.style.display = firstVisibleItemIndex < maxFirstItemIndex ? 'flex' : 'none';
-};
+    let firstVisibleItemIndex = 0;
 
-// Track the index of the leftmost item in the viewport
-let firstVisibleItemIndex = 0;
+    const updateArrows = () => {
+        const totalItems = currentCarousel.querySelectorAll('.item:not(.hide)').length;
+        const maxFirstItemIndex = totalItems - getVisibleItemsCount();
+        prev.style.display = firstVisibleItemIndex > 0 ? 'flex' : 'none';
+        next.style.display = firstVisibleItemIndex < maxFirstItemIndex ? 'flex' : 'none';
+    };
 
-// Event listeners for buttons
-next.addEventListener('click', () => {
-  // Calculate the number of items to scroll without exceeding the total number of items
-  const maxScrollIndex = carousel.querySelectorAll('.item').length - visibleItemCount;
-  const itemsToScroll = Math.min(visibleItemCount, maxScrollIndex - firstVisibleItemIndex);
-  carousel.scrollBy(totalScrollWidth(), 0);
-  firstVisibleItemIndex = Math.min(firstVisibleItemIndex + itemsToScroll, maxScrollIndex);
-  updateArrows();
-});
+    next.addEventListener('click', () => {
+        const maxScrollIndex = currentCarousel.querySelectorAll('.item:not(.hide)').length - getVisibleItemsCount();
+        const itemsToScroll = Math.min(getVisibleItemsCount(), maxScrollIndex - firstVisibleItemIndex);
+        currentCarousel.scrollBy(getTotalScrollWidth(), 0);
+        firstVisibleItemIndex = Math.min(firstVisibleItemIndex + itemsToScroll, maxScrollIndex);
+        updateArrows();
+    });
 
-prev.addEventListener('click', () => {
-  const itemsToScroll = Math.min(visibleItemCount, firstVisibleItemIndex);
-  carousel.scrollBy(-totalScrollWidth(), 0);
-  firstVisibleItemIndex = Math.max(firstVisibleItemIndex - itemsToScroll, 0);
-  updateArrows();
-});
+    prev.addEventListener('click', () => {
+        const itemsToScroll = Math.min(getVisibleItemsCount(), firstVisibleItemIndex);
+        currentCarousel.scrollBy(-getTotalScrollWidth(), 0);
+        firstVisibleItemIndex = Math.max(firstVisibleItemIndex - itemsToScroll, 0);
+        updateArrows();
+    });
 
-// Initial arrow state update and resize event listener
-updateArrows();
-window.addEventListener('resize', updateArrows);
+    window.addEventListener('resize', () => {
+        updateArrows();
+    });
+
+    // Function to switch the active carousel when the language is toggled
+    window.setActiveCarousel = (language) => {
+        currentCarousel = document.querySelector(`.carousel[data-language="${language}"]`);
+        firstVisibleItemIndex = 0; // Reset index when language changes
+
+        // Reset the scroll position of the carousel to the start
+        currentCarousel.scrollTo(0, 0);
+
+        updateArrows(); // Call updateArrows to reset the visibility of the arrows
+    };
+
+
+    updateArrows(); // Initial update
+}
+
+// Initialize carousel controls
+initializeCarouselControls();
+
+/**
+    * Spanish Language Switcher
+    */
+    // Function to set the language and update the flag icon
+const imagesDir = 'assets/images/';
+const englishElems = document.querySelectorAll('[data-language="en"]');
+const spanishElems = document.querySelectorAll('[data-language="es"]');
+
+
+function setLanguage(lang) {
+    const img = document.getElementById('language-flag');
+    const question = document.getElementById('language-question');
+    if (lang === 'es' || lang === 'es-ES') {
+        currentLang = 'es';
+        img.src = imagesDir + 'english-flag.png'; 
+        question.innerHTML = "English?&nbsp";
+        // Change the website text to Spanish
+        englishElems.forEach(el => el.classList.add('hide'));
+        spanishElems.forEach(el => el.classList.remove('hide'));
+    } else {
+        currentLang = 'en';
+        img.src = imagesDir + 'spanish-flag.png';
+        question.innerHTML = "¿Español?&nbsp";
+        // Change the website text to English
+        englishElems.forEach(el => el.classList.remove('hide'));
+        spanishElems.forEach(el => el.classList.add('hide'));
+    }
+    document.documentElement.setAttribute('lang', currentLang);
+    setActiveCarousel(currentLang);
+}
+
+// Toggle the language when the flag is clicked
+function toggleLanguage() {
+    setLanguage(currentLang === 'en' ? 'es' : 'en');
+}
+
+// Set the initial language based on the user's system language
+window.onload = function() {
+    const userLang = navigator.language || navigator.userLanguage; 
+    setLanguage(userLang.includes('es') ? 'es' : 'en');
+}

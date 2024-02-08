@@ -189,6 +189,8 @@
   #REUSED STYLE
   \*-----------------------------------*/
 
+.hide { display: none!important; }
+
 .container { padding-inline: 15px; }
 
 .section { padding-block: var(--section-padding); }
@@ -715,7 +717,7 @@
   overflow: hidden;
 }
 
-#carousel {
+.carousel {
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
@@ -748,7 +750,7 @@
   right: 5%;
 }
 
-#content {
+.carousel-content {
   display: flex; /* Changed to flex to better control the items */
   gap: var(--gap); /* Spacing between the items */
 }
@@ -762,11 +764,11 @@
 
 
 /* Hide the scrollbar */
-#carousel::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
   display: none;
 }
 
-#carousel {
+.carousel {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -810,20 +812,20 @@
 #APPOINTMENT
 \*-----------------------------------*/
 
-.appoin { padding-block-start: 0; }
+.appointment { padding-block-start: 0; }
 
-.appoin-card .card-banner { display: none; }
+.appointment-card .card-banner { display: none; }
 
-.appoin-card .card-content {
+.appointment-card .card-content {
   background-color: var(--light-gray-green);
   padding: 80px 15px;
   text-align: center;
   color: var(--white);
 }
 
-.appoin-card .section-title { color: var(--white); }
+.appointment-card .section-title { color: var(--white); }
 
-.appoin-card .section-text { margin-block: 15px 55px; }
+.appointment-card .section-text { margin-block: 15px 55px; }
 
 .input-field {
   background-color: var(--white);
@@ -1155,7 +1157,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  * APPOINTMENT
  */
 
-.appoin-card .card-content { padding-inline: 50px; }
+.appointment-card .card-content { padding-inline: 50px; }
 
 
 
@@ -1268,9 +1270,9 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  * APPOINTMENT
  */
 
-.appoin-card .card-banner { display: block; }
+.appointment-card .card-banner { display: block; }
 
-.appoin-card { display: flex; }
+.appointment-card { display: flex; }
 
 
 
@@ -1375,7 +1377,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  * APPOINTMENT
  */
 
-.appoin-card .input-wrapper {
+.appointment-card .input-wrapper {
   display: flex;
   gap: 20px;
 }
@@ -1477,7 +1479,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  * APPOINTMENT
  */
 
-.appoin-card .card-content { flex-grow: 1; }
+.appointment-card .card-content { flex-grow: 1; }
 
 /**
  * REVIEWS
