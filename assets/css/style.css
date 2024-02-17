@@ -593,6 +593,10 @@
 
 /* Responsive styles */
 @media (min-width: 768px) { /* Adjusts for tablets and up */
+  .title-group .form-btn {
+      width: 40%!important;
+  }
+
   .header-top-item:first-child {
       padding-right: 0;
   }
@@ -619,7 +623,7 @@
   }
 
   .about .image-container {
-    max-width: 50%; /* Adjust the max-width as needed for larger screens */
+    max-width: 60%; /* Adjust the max-width as needed for larger screens */
   }
 
   .about .text-container {
@@ -914,15 +918,15 @@ textarea.input-field {
   color: var(--white);
 }
 
-.title-container .form-btn {
+.title-group .form-btn {
     color: var(--white);
     background: rgba(0,0,0,0.5);
     border: 1px solid var(--white);
-    margin-bottom: 20px;
-    width: 50%;
+    margin-top: 20px;
+    width: 60%;
 }
 
-.title-container .form-btn:is(.btn:is(:hover, :focus)) {
+.title-group .form-btn:is(.btn:is(:hover, :focus)) {
     background-color: var(--white);
     color: var(--black);
 }
