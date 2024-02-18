@@ -73,10 +73,18 @@
 
 --section-padding: 80px;
 --gap: 16px;
+
+/* Default for desktops */
 --visible-item-count: 3;
 
-@media (max-width: 767px) {
+/* Tablets */
+@media (max-width: 1024px) {
     --visible-item-count: 2;
+}
+
+/* Phones */
+@media (max-width: 767px) {
+    --visible-item-count: 1;
 }
 
 
@@ -591,8 +599,24 @@
   margin: 0;
 }
 
+/* Base mobile styles: 1 item visible */
+.carousel-item {
+  min-width: calc(100% - var(--gap)); /* 100% of the carousel container width minus the gap */
+  margin-right: var(--gap); /* Add gap on the right */
+}
+
+/* Last item should not have a margin-right to avoid unnecessary scrolling */
+.carousel-item:last-child {
+  margin-right: 0;
+}
+
 /* Responsive styles */
 @media (min-width: 768px) { /* Adjusts for tablets and up */
+  .carousel-item {
+    /* Each item takes up half the container width minus half the gap */
+    min-width: calc(50% - (var(--gap) / 2));
+  }
+
   .title-group .form-btn {
       width: 40%!important;
   }
@@ -618,6 +642,10 @@
 }
 
 @media (min-width: 1024px) { /* Adjusts for desktops and up */
+  .carousel-item {
+    /* Each item takes up a third of the container width minus the gap divided by 3 */
+    min-width: calc(33.3333% - ((2 * var(--gap)) / 3));
+  }
   .about .image-text-container {
     justify-content: space-between; /* Add space between the image and text */
   }
@@ -749,7 +777,7 @@
 .carousel {
   display: flex;
   flex-wrap: nowrap;
-  overflow: auto;
+  overflow: hidden;
   scroll-behavior: smooth;
   flex-grow: 1; /* Allows the carousel to expand and fill the space between buttons */
   margin: 0 16px; /* Add some margin between the arrows and the carousel */
@@ -782,12 +810,13 @@
 .carousel-content {
   display: flex; /* Changed to flex to better control the items */
   gap: var(--gap); /* Spacing between the items */
+  width: 90%;
+  margin: 0 auto;
 }
 
 .item {
-  flex: 0 0 calc((100% - (2 * var(--gap))) / var(--visible-item-count));
   height: 350px; /* Or whatever height you desire */
-  width: calc((100% - 2 * var(--gap)) / var(--visible-item-count)); /* Adjust this to fit three items */
+  width: 100%;
   object-fit: contain; /* Keep the aspect ratio of the images */
 }
 
@@ -919,16 +948,16 @@ textarea.input-field {
 }
 
 .title-group .form-btn {
-    color: var(--white);
-    background: rgba(0,0,0,0.5);
-    border: 1px solid var(--white);
+    color: var(--black);
+    background: rgba(255, 255, 255);
+    border: 1px solid var(--black);
     margin-top: 20px;
-    width: 60%;
+    width: 66%;
 }
 
-.title-group .form-btn:is(.btn:is(:hover, :focus)) {
-    background-color: var(--white);
-    color: var(--black);
+.title-group .form-btn:is(:hover, :focus) {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 

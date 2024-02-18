@@ -83,73 +83,9 @@ addEventOnElem(window, "scroll", backTopActive);
 
 
 /**
-    * Gallery
-*/
-
-// Utility function to initialize carousel controls
-function initializeCarouselControls() {
-    let currentCarousel = document.querySelector('.carousel[data-language="en"]'); // Start with English by default
-
-    const getVisibleItemsCount = () => (window.innerWidth < 768) ? 2 : 3;
-    const spaceBetweenItems = 16;
-
-    const getItemWidth = () => {
-        const item = currentCarousel.querySelector('.item:not(.hide)');
-        return item ? item.offsetWidth : 0;
-    };
-
-    const getTotalScrollWidth = () => (getItemWidth() + spaceBetweenItems) * getVisibleItemsCount();
-
-    let firstVisibleItemIndex = 0;
-
-    const updateArrows = () => {
-        const totalItems = currentCarousel.querySelectorAll('.item:not(.hide)').length;
-        const maxFirstItemIndex = totalItems - getVisibleItemsCount();
-        prev.style.display = firstVisibleItemIndex > 0 ? 'flex' : 'none';
-        next.style.display = firstVisibleItemIndex < maxFirstItemIndex ? 'flex' : 'none';
-    };
-
-    next.addEventListener('click', () => {
-        const maxScrollIndex = currentCarousel.querySelectorAll('.item:not(.hide)').length - getVisibleItemsCount();
-        const itemsToScroll = Math.min(getVisibleItemsCount(), maxScrollIndex - firstVisibleItemIndex);
-        currentCarousel.scrollBy(getTotalScrollWidth(), 0);
-        firstVisibleItemIndex = Math.min(firstVisibleItemIndex + itemsToScroll, maxScrollIndex);
-        updateArrows();
-    });
-
-    prev.addEventListener('click', () => {
-        const itemsToScroll = Math.min(getVisibleItemsCount(), firstVisibleItemIndex);
-        currentCarousel.scrollBy(-getTotalScrollWidth(), 0);
-        firstVisibleItemIndex = Math.max(firstVisibleItemIndex - itemsToScroll, 0);
-        updateArrows();
-    });
-
-    window.addEventListener('resize', () => {
-        updateArrows();
-    });
-
-    // Function to switch the active carousel when the language is toggled
-    window.setActiveCarousel = (language) => {
-        currentCarousel = document.querySelector(`.carousel[data-language="${language}"]`);
-        firstVisibleItemIndex = 0; // Reset index when language changes
-
-        // Reset the scroll position of the carousel to the start
-        currentCarousel.scrollTo(0, 0);
-
-        updateArrows(); // Call updateArrows to reset the visibility of the arrows
-    };
-
-
-    updateArrows(); // Initial update
-}
-
-// Initialize carousel controls
-initializeCarouselControls();
-
-/**
     * Spanish Language Switcher
     */
-    // Function to set the language and update the flag icon
+// Function to set the language and update the flag icon
 const imagesDir = 'assets/images/';
 const englishElems = document.querySelectorAll('[data-language="en"]');
 const spanishElems = document.querySelectorAll('[data-language="es"]');
@@ -174,7 +110,6 @@ function setLanguage(lang) {
         spanishElems.forEach(el => el.classList.add('hide'));
     }
     document.documentElement.setAttribute('lang', currentLang);
-    setActiveCarousel(currentLang);
 }
 
 // Toggle the language when the flag is clicked
@@ -187,3 +122,34 @@ window.onload = function() {
     const userLang = navigator.language || navigator.userLanguage; 
     setLanguage(userLang.includes('es') ? 'es' : 'en');
 }
+var containerId = 'slider-1';
+
+var options = {
+    transitionTime: 500,
+    transitionZoom: 'in',
+    arrows:true,
+    arrowsHide: true,
+    auto: true,
+    autoTime: 2000,
+    images: [
+        'assets/images/gallery-1.jpg',
+        'assets/images/gallery-2.jpg',
+        'assets/images/gallery-3.jpg',
+        'assets/images/gallery-4.jpg',
+        'assets/images/gallery-5.jpg',
+        'assets/images/gallery-6.jpg',
+        'assets/images/gallery-7.jpg',
+        'assets/images/gallery-8.jpg',
+        'assets/images/gallery-9.jpg',
+        'assets/images/gallery-11.jpg',
+        'assets/images/gallery-12.jpg',
+        'assets/images/gallery-13.jpg',
+        'assets/images/gallery-14.jpg',
+        'assets/images/gallery-15.jpg',
+        'assets/images/gallery-16.jpg',
+        'assets/images/gallery-17.jpg',
+        'assets/images/gallery-20.jpg'
+    ]
+}
+
+var slider = createSlider(containerId, options);
