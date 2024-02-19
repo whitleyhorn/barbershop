@@ -122,34 +122,163 @@ window.onload = function() {
     const userLang = navigator.language || navigator.userLanguage; 
     setLanguage(userLang.includes('es') ? 'es' : 'en');
 }
-var containerId = 'slider-1';
 
-var options = {
+const englishImages = [
+    {
+        "imageUrl": "./assets/images/gallery-1.jpg",
+        "alt": "Experienced barber giving a haircut at Berkeley Barbershop in Berkeley Heights, NJ"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-2.jpg",
+        "alt": "Professional hairdresser styling hair at Berkeley Barbershop, New Jersey"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-3.jpg",
+        "alt": "Front view of Berkeley Barbershop, a welcoming local barbershop in Berkeley Heights"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-4.jpg",
+        "alt": "Satisfied customer with a new haircut at Berkeley Barbershop in Berkeley Heights"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-5.jpg",
+        "alt": "Hairdresser providing a trendy haircut at Berkeley Barbershop, NJ"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-6.jpg",
+        "alt": "Young man enjoying a stylish haircut at Berkeley Barbershop, New Jersey"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-7.jpg",
+        "alt": "Berkeley Barbershop exterior with motorcycle, a popular barbershop in Berkeley Heights"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-8.jpg",
+        "alt": "Hairdresser drying hair at Berkeley Barbershop, a trusted barbershop in Berkeley Heights, NJ"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-9.jpg",
+        "alt": "Barber shop client getting a modern haircut at Berkeley Barbershop in NJ"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-11.jpg",
+        "alt": "Berkeley Barbershop storefront with motorcycle parked in front in Berkeley Heights, NJ"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-12.jpg",
+        "alt": "Back view of a fresh haircut at Berkeley Barbershop, showcasing professional barbering"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-13.jpg",
+        "alt": "Hairdresser at Berkeley Barbershop perfecting a client's haircut in Berkeley Heights"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-14.jpg",
+        "alt": "Inside view of Berkeley Barbershop with customers getting haircuts and grooming services"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-15.jpg",
+        "alt": "Busy day at Berkeley Barbershop with hairdressers providing expert haircuts"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-16.jpg",
+        "alt": "Side view of a sharp and modern men's haircut at Berkeley Barbershop, NJ"
+    },
+    {
+        "imageUrl": "./assets/images/gallery-20.jpg",
+        "alt": "Customer enjoying a new, clean haircut at Berkeley Barbershop, NJ"
+    }
+]
+
+const spanishImages = [
+    {
+        imageUrl: './assets/images/gallery-1.jpg',
+        alt: 'Barbero experimentado cortando el cabello en Berkeley Barbershop en Berkeley Heights, NJ',
+    },
+    {
+        imageUrl: './assets/images/gallery-2.jpg',
+        alt: 'Peluquero profesional estilizando cabello en Berkeley Barbershop, Nueva Jersey',
+    },
+    {
+        imageUrl: './assets/images/gallery-3.jpg',
+        alt: 'Vista frontal de Berkeley Barbershop, una barbería local acogedora en Berkeley Heights',
+    },
+    {
+        imageUrl: './assets/images/gallery-4.jpg',
+        alt: 'Cliente satisfecho con un nuevo corte de pelo en Berkeley Barbershop en Berkeley Heights',
+    },
+    {
+        imageUrl: './assets/images/gallery-5.jpg',
+        alt: 'Peluquera proporcionando un corte de pelo moderno en Berkeley Barbershop, NJ',
+    },
+    {
+        imageUrl: './assets/images/gallery-6.jpg',
+        alt: 'Joven disfrutando de un corte de pelo con estilo en Berkeley Barbershop, Nueva Jersey',
+    },
+    {
+        imageUrl: './assets/images/gallery-7.jpg',
+        alt: 'Exterior de Berkeley Barbershop con motocicleta, una barbería popular en Berkeley Heights',
+    },
+    {
+        imageUrl: './assets/images/gallery-8.jpg',
+        alt: 'Peluquera secando cabello en Berkeley Barbershop, una barbería de confianza en Berkeley Heights, NJ',
+    },
+    {
+        imageUrl: './assets/images/gallery-9.jpg',
+        alt: 'Cliente de barbería obteniendo un corte de pelo moderno en Berkeley Barbershop en NJ',
+    },
+    {
+        imageUrl: './assets/images/gallery-11.jpg',
+        alt: 'Fachada de Berkeley Barbershop con moto aparcada enfrente en Berkeley Heights, NJ',
+    },
+    {
+        imageUrl: './assets/images/gallery-12.jpg',
+        alt: 'Vista trasera de un corte de pelo fresco en Berkeley Barbershop, mostrando barbería profesional',
+    },
+    {
+        imageUrl: './assets/images/gallery-13.jpg',
+        alt: 'Peluquera en Berkeley Barbershop perfeccionando el corte de pelo de un cliente en Berkeley Heights',
+    },
+    {
+        imageUrl: './assets/images/gallery-14.jpg',
+        alt: 'Vista interior de Berkeley Barbershop con clientes recibiendo cortes de pelo y servicios de aseo',
+    },
+    {
+        imageUrl: './assets/images/gallery-15.jpg',
+        alt: 'Día ajetreado en Berkeley Barbershop con peluqueros proporcionando cortes de pelo expertos',
+    },
+    {
+        imageUrl: './assets/images/gallery-16.jpg',
+        alt: 'Vista lateral de un corte de pelo masculino moderno y definido en Berkeley Barbershop, NJ',
+    },
+    {
+        imageUrl: './assets/images/gallery-20.jpg',
+        alt: 'Cliente disfrutando de un nuevo corte de pelo limpio en Berkeley Barbershop, NJ',
+    },
+];
+
+
+
+
+// Assuming you have a base options object structure that you want to modify for English and Spanish
+const baseOptions = {
     transitionTime: 500,
     transitionZoom: 'in',
     arrows:true,
     arrowsHide: true,
     auto: true,
     autoTime: 2000,
-    images: [
-        'assets/images/gallery-1.jpg',
-        'assets/images/gallery-2.jpg',
-        'assets/images/gallery-3.jpg',
-        'assets/images/gallery-4.jpg',
-        'assets/images/gallery-5.jpg',
-        'assets/images/gallery-6.jpg',
-        'assets/images/gallery-7.jpg',
-        'assets/images/gallery-8.jpg',
-        'assets/images/gallery-9.jpg',
-        'assets/images/gallery-11.jpg',
-        'assets/images/gallery-12.jpg',
-        'assets/images/gallery-13.jpg',
-        'assets/images/gallery-14.jpg',
-        'assets/images/gallery-15.jpg',
-        'assets/images/gallery-16.jpg',
-        'assets/images/gallery-17.jpg',
-        'assets/images/gallery-20.jpg'
-    ]
-}
+};
 
-var slider = createSlider(containerId, options);
+const englishOptions = {
+    ...baseOptions,
+    images: englishImages
+};
+
+const spanishOptions = {
+    ...baseOptions,
+    images: spanishImages
+};
+
+var englishSlider = createSlider('slider-english', englishOptions);
+var spanishSlider = createSlider('slider-spanish', spanishOptions);
