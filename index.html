@@ -27,6 +27,7 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
+
   <!-- 
     - preload images
   -->
@@ -107,7 +108,7 @@
             </div>
             <div class="subtitle-container">
                 <h2>Berkeley Barber Shop</h2>
-                <h2>Placeholder Text</h2>
+                <h2>Berkeley Heights, NJ 07922</h2>
             </div>
             <div class="title-container">
                 <h1 data-language="en">STYLISH. TRENDY. REFRESHING.</h1>
@@ -138,7 +139,7 @@
             <a href="#gallery" class="nav-item" data-nav-link>Gallery</a>
             <img src="./assets/images/black_scissors.png" class="nav-scissors" alt="Scissors">
             <a href="#reviews" class="nav-item" data-nav-link>Reviews</a>
-            <a href="#footer" class="nav-item" data-nav-link>Contact</a>
+            <a href="https://berkeleybarbershop.as.me/schedule.php" class="nav-item" data-nav-link>Book Now</a>
         </div>
 
         <div class="nav-item-container hide" data-language="es">
@@ -146,7 +147,7 @@
             <a href="#gallery" class="nav-item" data-nav-link>Galería</a>
             <img src="./assets/images/black_scissors.png" class="nav-scissors" alt="Tijeras">
             <a href="#reviews" class="nav-item" data-nav-link>Opiniones</a>
-            <a href="#footer" class="nav-item" data-nav-link>Contacto</a>
+            <a href="https://berkeleybarbershop.as.me/schedule.php" class="nav-item" data-nav-link>Reservar Ahora</a>
         </div>
 
         <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
@@ -197,248 +198,310 @@
           </p>
 
           <div class="pricing-tab-container">
+              <ul class="tab-filter">
+                  <li>
+                      <button class="filter-btn active" data-filter-btn="all">
+                          <div class="btn-icon">
+                              <iconify-icon icon="emojione-monotone:barber-pole" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">All Services</p>
+                      </button>
+                  </li>
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="haircut-styling">
+                          <div class="btn-icon">
+                              <iconify-icon icon="f7:scissors" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Haircut/<br>Styling</p>
+                      </button>
+                  </li>
+
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="shaving-trimming">
+                          <div class="btn-icon">
+                              <iconify-icon icon="fluent-emoji-high-contrast:razor" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Shaving/<br>Trimming</p>
+                      </button>
+                  </li>
+                  <li>
+                      <button class="filter-btn" data-filter-btn="color">
+                          <div class="btn-icon">
+                              <iconify-icon icon="material-symbols:palette-outline" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Color</p>
+                      </button>
+                  </li>
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="facial-detailing">
+                          <div class="btn-icon">
+                              <iconify-icon icon="icon-park-solid:eyebrow" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Facial/<br>Detailing</p>
+                      </button>
+                  </li>
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="packages">
+                          <div class="btn-icon">
+                              <iconify-icon icon="fluent-mdl2:giftbox" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Packages</p>
+                      </button>
+                  </li>
+
+              </ul>
 
               <ul class="grid-list">
 
-                  <li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/haircut.png" width="90" height="90" alt="Haircut" class="img-cover" data-language="en">
-            <img src="./assets/images/haircut.png" width="90" height="90" alt="Corte de Cabello" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Haircut</h3>
-            <h3 class="h3 card-title hide" data-language="es">Corte de Cabello</h3>
-            <p class="card-text" data-language="en">Fresh and stylish</p>
-            <p class="card-text hide" data-language="es">Fresco y elegante</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/haircut.png" width="90" height="90" alt="Haircut" class="img-cover" data-language="en">
+                              <img src="./assets/images/haircut.png" width="90" height="90" alt="Corte de Cabello" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Haircut</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Corte de Cabello</h3>
+                              <p class="card-text" data-language="en">Fresh and stylish</p>
+                              <p class="card-text hide" data-language="es">Fresco y elegante</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/specialty-haircut.png" width="90" height="90" alt="Specialty Haircut" class="img-cover" data-language="en">
-            <img src="./assets/images/specialty-haircut.png" width="90" height="90" alt="Corte Especializado" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Specialty Haircut</h3>
-            <h3 class="h3 card-title hide" data-language="es">Corte Especializado</h3>
-            <p class="card-text" data-language="en">Fades, Flat Top, Mohawks</p>
-            <p class="card-text hide" data-language="es">Degradados, Corte Plano, Mohawks</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/specialty-haircut.png" width="90" height="90" alt="Specialty Haircut" class="img-cover" data-language="en">
+                              <img src="./assets/images/specialty-haircut.png" width="90" height="90" alt="Corte Especializado" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Specialty Haircut</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Corte Especializado</h3>
+                              <p class="card-text" data-language="en">Fades, Flat Top, Mohawks</p>
+                              <p class="card-text hide" data-language="es">Degradados, Corte Plano, Mohawks</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/boys-haircut.png" width="90" height="90" alt="Boy's Haircut" class="img-cover" data-language="en">
-            <img src="./assets/images/boys-haircut.png" width="90" height="90" alt="Corte de Cabello para Niños" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Boy's Haircut</h3>
-            <h3 class="h3 card-title hide" data-language="es">Corte de Cabello para Niños</h3>
-            <p class="card-text" data-language="en">For boys aged 10 and under</p>
-            <p class="card-text hide" data-language="es">Para niños de 10 años y menores</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/boys-haircut.png" width="90" height="90" alt="Boy's Haircut" class="img-cover" data-language="en">
+                              <img src="./assets/images/boys-haircut.png" width="90" height="90" alt="Corte de Cabello para Niños" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Boy's Haircut</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Corte de Cabello para Niños</h3>
+                              <p class="card-text" data-language="en">For boys aged 10 and under</p>
+                              <p class="card-text hide" data-language="es">Para niños de 10 años y menores</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/senior-haircut.png" width="90" height="90" alt="Senior Citizen Haircut" class="img-cover" data-language="en">
-            <img src="./assets/images/senior-haircut.png" width="90" height="90" alt="Corte de Cabello para Personas Mayores" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Senior Citizen Haircut</h3>
-            <h3 class="h3 card-title hide" data-language="es">Corte de Cabello para Personas Mayores</h3>
-            <p class="card-text" data-language="en">For individuals aged 62 and up</p>
-            <p class="card-text hide" data-language="es">Para personas de 62 años en adelante</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/senior-haircut.png" width="90" height="90" alt="Senior Citizen Haircut" class="img-cover" data-language="en">
+                              <img src="./assets/images/senior-haircut.png" width="90" height="90" alt="Corte de Cabello para Personas Mayores" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Senior Citizen Haircut</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Corte de Cabello para Personas Mayores</h3>
+                              <p class="card-text" data-language="en">For individuals aged 62 and up</p>
+                              <p class="card-text hide" data-language="es">Para personas de 62 años en adelante</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/line-up.png" width="90" height="90" alt="Line Up" class="img-cover" data-language="en">
-            <img src="./assets/images/line-up.png" width="90" height="90" alt="Alineación" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Line Up</h3>
-            <h3 class="h3 card-title hide" data-language="es">Alineación</h3>
-            <p class="card-text" data-language="en">Sharp and precise</p>
-            <p class="card-text hide" data-language="es">Nítido y preciso</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/line-up.png" width="90" height="90" alt="Line Up" class="img-cover" data-language="en">
+                              <img src="./assets/images/line-up.png" width="90" height="90" alt="Alineación" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Line Up</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Alineación</h3>
+                              <p class="card-text" data-language="en">Sharp and precise</p>
+                              <p class="card-text hide" data-language="es">Nítido y preciso</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/hot-towel-shave.png" width="90" height="90" alt="Hot Towel Shave" class="img-cover" data-language="en">
-            <img src="./assets/images/hot-towel-shave.png" width="90" height="90" alt="Afeitado con Toalla Caliente" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Hot Towel Shave</h3>
-            <h3 class="h3 card-title hide" data-language="es">Afeitado con Toalla Caliente</h3>
-            <p class="card-text" data-language="en">Relaxing and luxurious</p>
-            <p class="card-text hide" data-language="es">Relajante y lujoso</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/hot-towel-shave.png" width="90" height="90" alt="Hot Towel Shave" class="img-cover" data-language="en">
+                              <img src="./assets/images/hot-towel-shave.png" width="90" height="90" alt="Afeitado con Toalla Caliente" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Hot Towel Shave</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Afeitado con Toalla Caliente</h3>
+                              <p class="card-text" data-language="en">Relaxing and luxurious</p>
+                              <p class="card-text hide" data-language="es">Relajante y lujoso</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/beard-trim.png" width="90" height="90" alt="Beard Trim" class="img-cover" data-language="en">
-            <img src="./assets/images/beard-trim.png" width="90" height="90" alt="Recorte de Barba" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Beard Trim</h3>
-            <h3 class="h3 card-title hide" data-language="es">Recorte de Barba</h3>
-            <p class="card-text" data-language="en">Neat and tidy</p>
-            <p class="card-text hide" data-language="es">Ordenado y limpio</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/beard-trim.png" width="90" height="90" alt="Beard Trim" class="img-cover" data-language="en">
+                              <img src="./assets/images/beard-trim.png" width="90" height="90" alt="Recorte de Barba" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Beard Trim</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Recorte de Barba</h3>
+                              <p class="card-text" data-language="en">Neat and tidy</p>
+                              <p class="card-text hide" data-language="es">Ordenado y limpio</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/head-shave.png" width="90" height="90" alt="Head Shave" class="img-cover" data-language="en">
-            <img src="./assets/images/head-shave.png" width="90" height="90" alt="Afeitado de Cabeza" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Head Shave</h3>
-            <h3 class="h3 card-title hide" data-language="es">Afeitado de Cabeza</h3>
-            <p class="card-text" data-language="en">Smooth and refreshing</p>
-            <p class="card-text hide" data-language="es">Suave y refrescante</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/head-shave.png" width="90" height="90" alt="Head Shave" class="img-cover" data-language="en">
+                              <img src="./assets/images/head-shave.png" width="90" height="90" alt="Afeitado de Cabeza" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Head Shave</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Afeitado de Cabeza</h3>
+                              <p class="card-text" data-language="en">Smooth and refreshing</p>
+                              <p class="card-text hide" data-language="es">Suave y refrescante</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/eyebrows.png" width="90" height="90" alt="Eyebrows" class="img-cover" data-language="en">
-            <img src="./assets/images/eyebrows.png" width="90" height="90" alt="Cejas" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Eyebrows</h3>
-            <h3 class="h3 card-title hide" data-language="es">Cejas</h3>
-            <p class="card-text" data-language="en">Trim and shape</p>
-            <p class="card-text hide" data-language="es">Recorte y forma</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="facial-detailing">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/eyebrows.png" width="90" height="90" alt="Eyebrows" class="img-cover" data-language="en">
+                              <img src="./assets/images/eyebrows.png" width="90" height="90" alt="Cejas" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Eyebrows</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Cejas</h3>
+                              <p class="card-text" data-language="en">Trim and shape</p>
+                              <p class="card-text hide" data-language="es">Recorte y forma</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/designs-graphics.png" width="90" height="90" alt="Designs/Graphics" class="img-cover" data-language="en">
-            <img src="./assets/images/designs-graphics.png" width="90" height="90" alt="Diseños/Gráficos" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Designs & Graphics</h3>
-            <h3 class="h3 card-title hide" data-language="es">Diseños & Gráficos</h3>
-            <p class="card-text" data-language="en">Creative and unique</p>
-            <p class="card-text hide" data-language="es">Creativo y único</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="facial-detailing">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/designs-graphics.png" width="90" height="90" alt="Designs/Graphics" class="img-cover" data-language="en">
+                              <img src="./assets/images/designs-graphics.png" width="90" height="90" alt="Diseños/Gráficos" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Designs & Graphics</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Diseños & Gráficos</h3>
+                              <p class="card-text" data-language="en">Creative and unique</p>
+                              <p class="card-text hide" data-language="es">Creativo y único</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/hair-color-head.png" width="90" height="90" alt="Hair Color (Head)" class="img-cover" data-language="en">
-            <img src="./assets/images/hair-color-head.png" width="90" height="90" alt="Color de Cabello (Cabeza)" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Hair Color (Head)</h3>
-            <h3 class="h3 card-title hide" data-language="es">Color de Cabello (Cabeza)</h3>
-            <p class="card-text" data-language="en">Vibrant and lasting</p>
-            <p class="card-text hide" data-language="es">Vibrante y duradero</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="color">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/hair-color-head.png" width="90" height="90" alt="Hair Color (Head)" class="img-cover" data-language="en">
+                              <img src="./assets/images/hair-color-head.png" width="90" height="90" alt="Color de Cabello (Cabeza)" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Hair Color (Head)</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Color de Cabello (Cabeza)</h3>
+                              <p class="card-text" data-language="en">Vibrant and lasting</p>
+                              <p class="card-text hide" data-language="es">Vibrante y duradero</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/hair-color-beard.png" width="90" height="90" alt="Hair Color (Beard)" class="img-cover" data-language="en">
-            <img src="./assets/images/hair-color-beard.png" width="90" height="90" alt="Color de Cabello (Barba)" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Hair Color (Beard)</h3>
-            <h3 class="h3 card-title hide" data-language="es">Color de Cabello (Barba)</h3>
-            <p class="card-text" data-language="en">Enhance your facial hair</p>
-            <p class="card-text hide" data-language="es">Mejora tu vello facial</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="color">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/hair-color-beard.png" width="90" height="90" alt="Hair Color (Beard)" class="img-cover" data-language="en">
+                              <img src="./assets/images/hair-color-beard.png" width="90" height="90" alt="Color de Cabello (Barba)" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Hair Color (Beard)</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Color de Cabello (Barba)</h3>
+                              <p class="card-text" data-language="en">Enhance your facial hair</p>
+                              <p class="card-text hide" data-language="es">Mejora tu vello facial</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/shampoo.png" width="90" height="90" alt="Shampoo" class="img-cover" data-language="en">
-            <img src="./assets/images/shampoo.png" width="90" height="90" alt="Champú" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Shampoo</h3>
-            <h3 class="h3 card-title hide" data-language="es">Champú</h3>
-            <p class="card-text" data-language="en">Refresh and cleanse</p>
-            <p class="card-text hide" data-language="es">Refresca y limpia</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="haircut-styling"">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/shampoo.png" width="90" height="90" alt="Shampoo" class="img-cover" data-language="en">
+                              <img src="./assets/images/shampoo.png" width="90" height="90" alt="Champú" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Shampoo</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Champú</h3>
+                              <p class="card-text" data-language="en">Refresh and cleanse</p>
+                              <p class="card-text hide" data-language="es">Refresca y limpia</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/platinum-package.png" width="90" height="90" alt="Platinum Package" class="img-cover" data-language="en">
-            <img src="./assets/images/platinum-package.png" width="90" height="90" alt="Paquete Platino" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Platinum Package</h3>
-            <h3 class="h3 card-title hide" data-language="es">Paquete Platino</h3>
-            <p class="card-text" data-language="en">Haircut + Beard + Eyebrows</p>
-            <p class="card-text hide" data-language="es">Corte de Cabello + Barba + Cejas</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="packages">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/platinum-package.png" width="90" height="90" alt="Platinum Package" class="img-cover" data-language="en">
+                              <img src="./assets/images/platinum-package.png" width="90" height="90" alt="Paquete Platino" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Platinum Package</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Paquete Platino</h3>
+                              <p class="card-text" data-language="en">Haircut + Beard + Eyebrows</p>
+                              <p class="card-text hide" data-language="es">Corte de Cabello + Barba + Cejas</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/gold-package.png" width="90" height="90" alt="Gold Package" class="img-cover" data-language="en">
-            <img src="./assets/images/gold-package.png" width="90" height="90" alt="Paquete Oro" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Gold Package</h3>
-            <h3 class="h3 card-title hide" data-language="es">Paquete Oro</h3>
-            <p class="card-text" data-language="en">Haircut + Beard</p>
-            <p class="card-text hide" data-language="es">Corte de Cabello + Barba</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="packages">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/gold-package.png" width="90" height="90" alt="Gold Package" class="img-cover" data-language="en">
+                              <img src="./assets/images/gold-package.png" width="90" height="90" alt="Paquete Oro" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Gold Package</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Paquete Oro</h3>
+                              <p class="card-text" data-language="en">Haircut + Beard</p>
+                              <p class="card-text hide" data-language="es">Corte de Cabello + Barba</p>
+                          </div>
+                      </div>
+                  </li>
 
-<li>
-    <div class="pricing-card">
-        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-            <img src="./assets/images/silver-package.png" width="90" height="90" alt="Silver Package" class="img-cover" data-language="en">
-            <img src="./assets/images/silver-package.png" width="90" height="90" alt="Paquete Plata" class="img-cover hide" data-language="es">
-        </figure>
-        <div class="wrapper">
-            <h3 class="h3 card-title" data-language="en">Silver Package</h3>
-            <h3 class="h3 card-title hide" data-language="es">Paquete Plata</h3>
-            <p class="card-text" data-language="en">Haircut + Eyebrows</p>
-            <p class="card-text hide" data-language="es">Corte de Cabello + Cejas</p>
-        </div>
-    </div>
-</li>
+                  <li data-filter="packages">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="./assets/images/silver-package.png" width="90" height="90" alt="Silver Package" class="img-cover" data-language="en">
+                              <img src="./assets/images/silver-package.png" width="90" height="90" alt="Paquete Plata" class="img-cover hide" data-language="es">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title" data-language="en">Silver Package</h3>
+                              <h3 class="h3 card-title hide" data-language="es">Paquete Plata</h3>
+                              <p class="card-text" data-language="en">Haircut + Eyebrows</p>
+                              <p class="card-text hide" data-language="es">Corte de Cabello + Cejas</p>
+                          </div>
+                      </div>
+                  </li>
 
 
 
@@ -458,12 +521,10 @@
       <!-- 
         - #GALLERY
       -->
-      <section class="section">
-      </section>
-
       <section class="section gallery" id="gallery" aria-label="photo gallery">
-          <div class="container">
+          <div class="slider-container">
               <div id='slider-english' data-language="en"></div>
+              <div id='slider-spanish' data-language="es" class="hide"></div>
           </div>
       </section> 
 
@@ -498,7 +559,7 @@
 
                   </div>
 
-                  <div class="card-content" data-language="es">
+                  <div class="card-content hide" data-language="es">
 
                       <h2 class="h2 section-title">Reserva una Cita</h2>
 
@@ -529,6 +590,9 @@
   </main>
 
 
+  <section class="map" style="height: 500px; position: relative;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.540649370836!2d-74.44418878794836!3d40.68408907127857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3badcc5f7061d%3A0x5360e9d725f2f9a0!2sBerkeley%20Barber%20Shop!5e0!3m2!1sen!2sus!4v1708802370372!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
 
 
 
@@ -581,37 +645,8 @@
                       </li>
 
                       <li>
-                          <a href="#appointment" class="footer-link has-before" data-language="en">Schedule an Appointment</a>
-                          <a href="#appointment" class="hide footer-link has-before" data-language="es">Agenda una Cita</a>
-                      </li>
-
-                  </ul>
-
-                  <ul class="footer-list">
-
-                      <li>
-                          <p class="footer-list-title" data-language="en">Services</p>
-                          <p class="hide footer-list-title" data-language="es">Servicios</p>
-                      </li>
-
-                      <li>
-                          <a href="#services" class="footer-link has-before">Hair Cutting</a>
-                      </li>
-
-                      <li>
-                          <a href="#services" class="footer-link has-before">Shaving & Design</a>
-                      </li>
-
-                      <li>
-                          <a href="#services" class="footer-link has-before">Hair Colors</a>
-                      </li>
-
-                      <li>
-                          <a href="#services" class="footer-link has-before">Beauty & Spa</a>
-                      </li>
-
-                      <li>
-                          <a href="#services" class="footer-link has-before">Body Massages</a>
+                          <a href="https://berkeleybarbershop.as.me/schedule.php" class="footer-link has-before" data-language="en">Schedule an Appointment</a>
+                          <a href="https://berkeleybarbershop.as.me/schedule.php" class="hide footer-link has-before" data-language="es">Agenda una Cita</a>
                       </li>
 
                   </ul>
@@ -623,7 +658,7 @@
                           <p class="hide footer-list-title" data-language="es">Nuestro Barbería</p>
                       </li>
 
-                      <img src="./assets/images/berkeley_barbershop_small.jpg" height="250" width="250">
+                      <img src="./assets/images/berkeley_barbershop_small.jpg" height="310" width="310">
                   </ul>
 
                   <ul class="footer-list">
@@ -671,7 +706,7 @@
           <div class="footer-bottom has-before">
               <p class="copyright">
               &copy; 2024 
-              <a href="https://www.lanthiamedia.com" class="copyright-link">lanthiamedia.com</a>. 
+              <a href="https://www.lanthiamedia.com" class="copyright-link">lanthiamedia.com</a>
               <span data-language="en">All Rights Reserved.</span>
               <span class="hide" data-language="es">Todos los Derechos Reservados.</span>
               </p>
@@ -702,6 +737,9 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- iconify -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.0.0/dist/iconify-icon.min.js"></script>
 
   <!--
       - Yelp Reviews Plugin

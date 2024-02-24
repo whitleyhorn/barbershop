@@ -705,6 +705,35 @@
   padding: 40px 5px;
 }
 
+.tab-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+  margin-block-end: 30px;
+}
+
+.filter-btn {
+  color: var(--eerie-black-1);
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  min-width: 130px;
+  padding-block: 12px;
+  border: 1px solid var(--platinum);
+  transition: var(--transition-1);
+  height: 100%;
+}
+
+.filter-btn .btn-icon { display: none; }
+
+.filter-btn.active {
+  background-color: var(--light-gray-green);
+  border-color: var(--light-gray-green);
+  color: var(--white);
+}
+
 .pricing .card-text {
     line-height: 2rem;
 }
@@ -722,7 +751,7 @@
 
 .pricing-card {
   background-color: var(--light-gray-green_10);
-  padding: 5px;
+  padding: 13px;
   border-radius: var(--radius-5);
   display: flex;
   flex-wrap: wrap;
@@ -765,6 +794,11 @@
 .title-wrapper { margin-block-end: 60px; }
 
 .gallery .section-text { margin-block: 12px 15px; }
+
+.slider-container {
+    max-width: 800px; 
+    margin: 0 auto;
+}
 
 #wrapper {
   display: flex; /* Use flexbox for the wrapper */
@@ -969,7 +1003,7 @@ textarea.input-field {
 \*-----------------------------------*/
 
 #footer {
-  background-color: var(--dark-green-gray);
+  background-color: var(--black);
   padding-block-end: 30px;
   padding-top: 30px;
 }
@@ -1037,7 +1071,7 @@ textarea.input-field {
 }
 
 .footer-link {
-  color: var(--white_50);
+  color: var(--light-gray);
   gap: 10px;
   margin-block-start: 8px;
   transition: var(--transition-1);
@@ -1054,7 +1088,7 @@ textarea.input-field {
 }
 
 .footer-list-item ion-icon {
-  color: var(--light-gray-green);
+  color: var(--light-gray);
   font-size: 18px;
   flex-shrink: 0;
   --ionicon-stroke-width: 50px;
@@ -1062,14 +1096,13 @@ textarea.input-field {
 }
 
 .contact-link {
-  color: var(--white_50);
+  color: var(--light-gray);
   transition: var(--transition-1);
 }
 
 a.contact-link:is(:hover, :focus) { color: var(--white); }
 
 .footer-bottom {
-  background-color: var(--eerie-black-2_85);
   text-align: center;
   color: white;
   padding: 15px;
@@ -1200,6 +1233,14 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 /**
  * PRICING
  */
+
+.filter-btn .btn-icon {
+    display: block;
+    font-size: 55px;
+    line-height: 1;
+    margin-block-end: 5px;
+}
+
 
 .pricing-card {
   flex-wrap: nowrap;
@@ -1535,6 +1576,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  * PRICING
  */
 
+.filter-btn { min-width: 178px; }
 
 
 
@@ -1562,7 +1604,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  * FOOTER
  */
 
-.footer-link-box { grid-template-columns: 0.5fr 0.5fr 1fr 0.8fr; }
+.footer-link-box { grid-template-columns: repeat(3, 1fr); }
 
 
 
