@@ -197,11 +197,14 @@
   #REUSED STYLE
   \*-----------------------------------*/
 
+
 .hide { display: none!important; }
 
 .container { padding-inline: 15px; }
 
 .section { padding-block: var(--section-padding); }
+
+.section.reviews { padding-top: 0; }
 
 .has-before,
 .has-after {
@@ -1594,11 +1597,6 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
 .appointment-card .card-content { flex-grow: 1; }
 
-/**
- * REVIEWS
- */
-
-.reviews { padding-top: 0; }
 
 /**
  * FOOTER
