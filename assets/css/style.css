@@ -41,6 +41,7 @@
 --medium-gray: hsla(0, 0%, 93.73%);
 --platinum: hsl(0, 0%, 91%);
 --black: hsla(0, 0%, 0%, 1);
+--black_40: hsla(0, 0%, 0%, 0.4);
 --black_30: hsla(0, 0%, 0%, 0.3);
 --white_10: hsla(0, 0%, 100%, 0.1);
 --white_30: hsla(0, 0%, 100%, 0.3 );
@@ -310,6 +311,10 @@
 
 /* HEADER */
 .new-header {
+    background-image: url('../images/berkeley_barbershop.jpg');
+    @supports (background-image: url('../images/berkeley_barbershop.webp')) {
+        background-image: url('../images/berkeley_barbershop.webp');
+    }
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -555,7 +560,7 @@
 
 .new-header::before {
   inset: 0;
-  background-color: var(--black_30);
+  background-color: var(--black_40);
   mix-blend-mode: multiply;
   z-index: -1;
 }
@@ -645,6 +650,12 @@
 }
 
 @media (min-width: 1024px) { /* Adjusts for desktops and up */
+  .new-header {
+    background-image: url('../images/berkeley_barbershop_desktop.jpg');
+    @supports (background-image: url('../images/berkeley_barbershop_desktop.webp')) {
+        background-image: url('../images/berkeley_barbershop_desktop.webp');
+    }
+  }
   .carousel-item {
     /* Each item takes up a third of the container width minus the gap divided by 3 */
     min-width: calc(33.3333% - ((2 * var(--gap)) / 3));

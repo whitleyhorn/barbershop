@@ -314,3 +314,32 @@ const filter = function () {
 }
 
 addEventOnElem(filterBtns, "click", filter);
+
+// Function to detect WebP support
+function supportsWebp(callback) {
+    // Create a small WebP image
+    var webP = new Image();
+    webP.onload = webP.onerror = function() {
+        callback(webP.height === 2);
+    };
+    webP.src = 'data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAAAAEAcQA1oAAUAAJABwAAoAAIAAASkAAB8AAIAA';
+}
+
+// Use the supportsWebp function
+supportsWebp(function(supported) {
+    var imagePath;
+    var isDesktop = window.innerWidth >= 1024; // Example breakpoint
+
+    if (isDesktop) {
+        imagePath = supported ? 'berkeley_barbershop_desktop.webp' : 'berkeley_barbershop_desktop.jpg';
+    } else {
+        imagePath = supported ? 'berkeley_barbershop.webp' : 'berkeley_barbershop.jpg';
+    }
+
+    // Preload the determined image
+    var link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = imagePath;
+    document.head.appendChild(link);
+});
