@@ -317,7 +317,7 @@
     }
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 92vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -376,7 +376,7 @@
 }
 
 .new-header h2 {
-    font-size: clamp(1rem, 0.5vw, 2.5rem);
+    font-size: clamp(1.2rem, 0.7vw, 2.8rem);
     margin: 0;
     color: white;
     font-weight: 300;
@@ -402,6 +402,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    height: 8vh;
 }
 
 /* Mobile Navbar Toggle */
@@ -650,12 +651,14 @@
 }
 
 @media (min-width: 1024px) { /* Adjusts for desktops and up */
+    /*
   .new-header {
     background-image: url('../images/berkeley_barbershop_desktop.jpg');
     @supports (background-image: url('../images/berkeley_barbershop_desktop.webp')) {
         background-image: url('../images/berkeley_barbershop_desktop.webp');
     }
   }
+*/
   .carousel-item {
     /* Each item takes up a third of the container width minus the gap divided by 3 */
     min-width: calc(33.3333% - ((2 * var(--gap)) / 3));
