@@ -311,9 +311,9 @@
 
 /* HEADER */
 .new-header {
-    background-image: url('../images/berkeley_barbershop.jpg');
-    @supports (background-image: url('../images/berkeley_barbershop.webp')) {
-        background-image: url('../images/berkeley_barbershop.webp');
+    background-image: url('../../assets/shared_images/berkeley_barbershop.jpg');
+    @supports (background-image: url('../../assets/shared_images/berkeley_barbershop.webp')) {
+        background-image: url('../../assets/shared_images/berkeley_barbershop.webp');
     }
     background-size: cover;
     background-position: center;
@@ -651,14 +651,6 @@
 }
 
 @media (min-width: 1024px) { /* Adjusts for desktops and up */
-    /*
-  .new-header {
-    background-image: url('../images/berkeley_barbershop_desktop.jpg');
-    @supports (background-image: url('../images/berkeley_barbershop_desktop.webp')) {
-        background-image: url('../images/berkeley_barbershop_desktop.webp');
-    }
-  }
-*/
   .carousel-item {
     /* Each item takes up a third of the container width minus the gap divided by 3 */
     min-width: calc(33.3333% - ((2 * var(--gap)) / 3));

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light only">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Berkeley Barber Shop</title>
+  <meta name="title" content="Berkeley Barber Shop | Cortes de Pelo Expertos y Aseo en Berkeley Heights, NJ" lang="es">
+  <meta name="description" content="Descubre Berkeley Barber Shop en Berkeley Heights, NJ - tu destino para cortes de cabello profesionales, cuidado de barba y una experiencia relajante en la barbería. Nuestros hábiles barberos están dedicados a brindar un servicio de primera calidad y cortes precisos. ¡Reserva tu cita hoy para lucir un estilo fresco y elegante en un ambiente acogedor!" lang="es">
+
+  <link rel="alternate" hreflang="en" href="https://berkeleybarbershop.com/en/index.html" />
+  <link rel="alternate" hreflang="es" href="https://berkeleybarbershop.com/es/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://berkeleybarbershop.com/en/index.html" />
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="../assets/shared_images/berkeley_barbershop.webp">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <div class="header-top">
+      <div class="container">
+
+        <ul class="header-top-list">
+
+          <li class="header-top-item">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+            <p class="item-title">Llámanos:</p>
+
+            <a href="tel:"+19084641166" class="item-link">(908) 464-1166</a>
+          </li>
+
+          <li class="header-top-item">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+            <p class="item-title">Abierto Hoy:</p>
+
+            <p class="item-text" id="today-hours"></p>
+          </li>
+
+          <li>
+            <ul class="social-list">
+                <li class="language-switcher" onclick="window.location.href = '../en/index.html';">
+                    <span id="language-question">English?&nbsp;</span>
+                    <img id="language-flag" height="20" width="30" style="cursor: pointer; margin-right: 10px;" src="images/english-flag.png">
+                </li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+      <div class="new-header has-before">
+        <div class="title-group">
+            <div class="title-container top-line-container">
+                <span class="line"></span>
+                <picture>
+                    <source srcset="images/scissors.webp" type="image/webp">
+                    <img src="images/scissors.png" class="scissors" alt="Tijeras">
+                </picture>
+                <span class="line"></span>
+            </div>
+            <div class="subtitle-container">
+                <h2>Berkeley Barber Shop</h2>
+                <h2>Berkeley Heights, NJ</h2>
+            </div>
+            <div class="title-container">
+                <h1>ELEGANTE. MODERNO. REFRESCANTE.</h1>
+            </div>
+            <div class="title-container">
+                <span class="line"></span>
+            </div>
+            <div class="title-container">
+                <h2 class="italic-subtitle">Establecido en el corazón de Berkeley Heights desde 1954.</h2>
+            </div>
+            <a class="form-btn" href="https://BerkeleyBarberShop.as.me/">
+                <span class="span">Reservar Ahora</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <nav class="new-navbar" data-navbar>
+
+        <div class="nav-item-container">
+            <a href="#services" class="nav-item" data-nav-link>Servicios</a>
+            <a href="#gallery" class="nav-item" data-nav-link>Galería</a>
+            <picture>
+                <source srcset="images/black_scissors.webp" type="image/webp">
+                <img src="images/black_scissors.png" class="nav-scissors" alt="Tijeras">
+            </picture>
+            <a href="#reviews" class="nav-item" data-nav-link>Opiniones</a>
+            <a href="https://berkeleybarbershop.as.me/schedule.php" class="nav-item" data-nav-link>Reservar Ahora</a>
+        </div>
+
+        <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+    </nav>
+    <section class="section about" id="about" aria-label="about">
+        <div class="container">
+            <h2 class="h2 section-title text-center">Sobre Nosotros</h2>
+            <div class="image-text-container">
+                <div class="image-container">
+                    <picture>
+                        <source srcset="images/man_getting_haircut.webp" type="image/webp">
+                        <img src="images/man_getting_haircut.png" alt="Hombre cortándose el pelo" loading="lazy">
+                    </picture>
+                </div>
+                <div class="text-container">
+                    <p class="section-text">
+                    Bienvenido a Berkeley Barber Shop, un ícono de <b>Berkeley Heights, Nueva Jersey</b> desde 1954. Con un legado rico profundamente arraigado en nuestra comunidad, nos enorgullece redefinir y elevar el estilo personal. Nuestros hábiles barberos, con décadas de experiencia, brindan cortes de precisión que resisten el paso del tiempo. En Berkeley Barber Shop, vamos más allá del arreglo personal, creamos experiencias personalizadas que amplifican tu confianza. Adéntrate en una tradición de excelencia, donde lo clásico se encuentra con lo contemporáneo, y permítenos redefinir tu viaje de estilo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section reviews" id="reviews" aria-label="reviews">
+        <div class="container">
+            <div class="elfsight-app-e3a4d57c-e9f3-4b20-8831-734913aff690" data-elfsight-app-lazy></div>
+        </div>
+    </section>
+
+      <!-- 
+        - #PRICING
+      -->
+
+      <section class="section pricing has-bg-image has-before" id="services" aria-label="services">
+        <div class="container">
+
+          <h2 class="h2 section-title text-center">Servicios que Ofrecemos</h2>
+
+          At Berkeley Barber Shop, we're not just about haircuts; we're about the complete grooming experience. Our suite of services is meticulously designed to ensure every client leaves looking their sharpest and feeling their best.
+          </p>
+          <p class="section-text text-center">
+          En Berkeley Barber Shop, no solo se trata de cortes de pelo; se trata de la experiencia de arreglo personal completa. Nuestra gama de servicios está meticulosamente diseñada para asegurar que cada cliente salga luciendo su mejor versión y sintiéndose genial.
+          </p>
+
+          <div class="pricing-tab-container">
+              <ul class="tab-filter">
+                  <li>
+                      <button class="filter-btn active" data-filter-btn="all">
+                          <div class="btn-icon">
+                              <iconify-icon icon="emojione-monotone:barber-pole" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Todas las<br>Categorías</p>
+                      </button>
+                  </li>
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="haircut-styling">
+                          <div class="btn-icon">
+                              <iconify-icon icon="f7:scissors" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Cortes/<br>Estilismo</p>
+                      </button>
+                  </li>
+
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="shaving-trimming">
+                          <div class="btn-icon">
+                              <iconify-icon icon="fluent-emoji-high-contrast:razor" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Afeitado/<br>Recorte</p>
+                      </button>
+                  </li>
+                  <li>
+                      <button class="filter-btn" data-filter-btn="color">
+                          <div class="btn-icon">
+                              <iconify-icon icon="material-symbols:palette-outline" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Coloración</p>
+                      </button>
+                  </li>
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="facial-detailing">
+                          <div class="btn-icon">
+                              <iconify-icon icon="icon-park-solid:eyebrow" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Facial/<br>Detallado</p>
+                      </button>
+                  </li>
+
+                  <li>
+                      <button class="filter-btn" data-filter-btn="packages">
+                          <div class="btn-icon">
+                              <iconify-icon icon="fluent-mdl2:giftbox" aria-hidden="true"></iconify-icon>
+                          </div>
+
+                          <p class="btn-text">Paquetes</p>
+                      </button>
+                  </li>
+
+              </ul>
+
+              <ul class="grid-list">
+
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                                <picture>
+                                    <source srcset="images/haircut.webp" type="image/webp">
+                                    <img src="images/haircut.png" width="90" height="90" class="img-cover" alt="Corte de Cabello" loading="lazy">
+                                </picture>
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Corte de Cabello</h3>
+                              <p class="card-text">Fresco y elegante</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/specialty-haircut.png" width="90" height="90" alt="Corte Especializado" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Corte Especializado</h3>
+                              <p class="card-text">Degradados, Corte Plano, Mohawks</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/boys-haircut.png" width="90" height="90" alt="Corte de Cabello para Niños" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Corte de Cabello para Niños</h3>
+                              <p class="card-text">Para niños de 10 años y menores</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="haircut-styling">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/senior-haircut.png" width="90" height="90" alt="Corte de Cabello para Personas Mayores" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Corte de Cabello para Personas Mayores</h3>
+                              <p class="card-text">Para personas de 62 años en adelante</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/line-up.png" width="90" height="90" alt="Alineación" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Alineación</h3>
+                              <p class="card-text">Nítido y preciso</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/hot-towel-shave.png" width="90" height="90" alt="Afeitado con Toalla Caliente" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Afeitado con Toalla Caliente</h3>
+                              <p class="card-text">Relajante y lujoso</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/beard-trim.png" width="90" height="90" alt="Recorte de Barba" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Recorte de Barba</h3>
+                              <p class="card-text">Ordenado y limpio</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="shaving-trimming">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/head-shave.png" width="90" height="90" alt="Afeitado de Cabeza" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Afeitado de Cabeza</h3>
+                              <p class="card-text">Suave y refrescante</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="facial-detailing">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/eyebrows.png" width="90" height="90" alt="Cejas" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Cejas</h3>
+                              <p class="card-text">Recorte y forma</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="facial-detailing">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/designs-graphics.png" width="90" height="90" alt="Diseños/Gráficos" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Diseños & Gráficos</h3>
+                              <p class="card-text">Creativo y único</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="color">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/hair-color-head.png" width="90" height="90" alt="Color de Cabello (Cabeza)" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Color de Cabello (Cabeza)</h3>
+                              <p class="card-text">Vibrante y duradero</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="color">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/hair-color-beard.png" width="90" height="90" alt="Color de Cabello (Barba)" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Color de Cabello (Barba)</h3>
+                              <p class="card-text">Mejora tu vello facial</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="haircut-styling"">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/shampoo.png" width="90" height="90" alt="Champú" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Champú</h3>
+                              <p class="card-text">Refresca y limpia</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="packages">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/platinum-package.png" width="90" height="90" alt="Paquete Platino" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Paquete Platino</h3>
+                              <p class="card-text">Corte de Cabello + Barba + Cejas</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="packages">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/gold-package.png" width="90" height="90" alt="Paquete Oro" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Paquete Oro</h3>
+                              <p class="card-text">Corte de Cabello + Barba</p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li data-filter="packages">
+                      <div class="pricing-card">
+                          <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                              <img src="images/silver-package.png" width="90" height="90" alt="Paquete Plata" class="img-cover" loading="lazy">
+                          </figure>
+                          <div class="wrapper">
+                              <h3 class="h3 card-title">Paquete Plata</h3>
+                              <p class="card-text">Corte de Cabello + Cejas</p>
+                          </div>
+                      </div>
+                  </li>
+
+
+
+
+
+              </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #GALLERY
+      -->
+      <section class="section gallery" id="gallery" aria-label="photo gallery">
+        <div class="slider-container">
+            <div id='slider'>
+                <img src="images/barbero-corte-pelo-berkeley-nj.jpg" alt="Barbero experimentado dando un corte de cabello en Berkeley Barbershop en Berkeley Heights, NJ" webp-url="images/barbero-corte-pelo-berkeley-nj.webp" loading="lazy" loading="lazy">
+                <img src="images/peluquero-estilizando-pelo-berkeley-nj.jpg" alt="Peluquero profesional estilizando cabello en Berkeley Barbershop, Nueva Jersey" webp-url="images/peluquero-estilizando-pelo-berkeley-nj.webp" loading="lazy" loading="lazy">
+                <img src="images/vista-frente-barberia-berkeley.jpg" alt="Vista frontal de Berkeley Barbershop, una barbería local acogedora en Berkeley Heights" webp-url="images/vista-frente-barberia-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/cliente-corte-nuevo-berkeley.jpg" alt="Cliente satisfecho con un nuevo corte de cabello en Berkeley Barbershop en Berkeley Heights" webp-url="images/cliente-corte-nuevo-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/corte-pelo-moderno-berkeley-nj.jpg" alt="Peluquero proporcionando un corte de cabello moderno en Berkeley Barbershop, NJ" webp-url="images/corte-pelo-moderno-berkeley-nj.webp" loading="lazy" loading="lazy">
+                <img src="images/joven-corte-estiloso-berkeley.jpg" alt="Joven disfrutando de un corte de cabello estiloso en Berkeley Barbershop, Nueva Jersey" webp-url="images/joven-corte-estiloso-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/exterior-barberia-moto-berkeley.jpg" alt="Exterior de Berkeley Barbershop con motocicleta, una barbería popular en Berkeley Heights" webp-url="images/exterior-barberia-moto-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/peluquero-secando-pelo-berkeley.jpg" alt="Peluquero secando cabello en Berkeley Barbershop, una barbería de confianza en Berkeley Heights, NJ" webp-url="images/peluquero-secando-pelo-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/corte-moderno-berkeley-nj.jpg" alt="Cliente de barbería obteniendo un corte de cabello moderno en Berkeley Barbershop en NJ" webp-url="images/corte-moderno-berkeley-nj.webp" loading="lazy" loading="lazy">
+                <img src="images/fachada-barberia-moto-berkeley.jpg" alt="Fachada de Berkeley Barbershop con motocicleta estacionada al frente en Berkeley Heights, NJ" webp-url="images/fachada-barberia-moto-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/vista-trasera-corte-fresco-berkeley.jpg" alt="Vista trasera de un corte de cabello fresco en Berkeley Barbershop, mostrando barbería profesional" webp-url="images/vista-trasera-corte-fresco-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/peluquero-perfeccionando-corte-berkeley.jpg" alt="Peluquero en Berkeley Barbershop perfeccionando el corte de cabello de un cliente en Berkeley Heights" webp-url="images/peluquero-perfeccionando-corte-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/interior-barberia-clientes-berkeley.jpg" alt="Vista interior de Berkeley Barbershop con clientes recibiendo cortes de cabello y servicios de arreglo" webp-url="images/interior-barberia-clientes-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/dia-ocupado-barberia-berkeley.jpg" alt="Día ocupado en Berkeley Barbershop con peluqueros proporcionando cortes de cabello expertos" webp-url="images/dia-ocupado-barberia-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/vista-lateral-corte-moderno-hombres-berkeley.jpg" alt="Vista lateral de un corte de cabello masculino agudo y moderno en Berkeley Barbershop, NJ" webp-url="images/vista-lateral-corte-moderno-hombres-berkeley.webp" loading="lazy" loading="lazy">
+                <img src="images/cliente-disfrutando-corte-limpio-berkeley.jpg" alt="Cliente disfrutando de un nuevo corte de cabello limpio en Berkeley Barbershop, NJ" webp-url="images/cliente-disfrutando-corte-limpio-berkeley.webp" loading="lazy" loading="lazy">
+            </div>
+        </div>
+      </section> 
+
+
+      <!-- 
+          - #APPOINTMENT
+      -->
+
+      <section class="section appointment" id="appointment" aria-label="appointment">
+          <div class="container">
+
+              <div class="appointment-card">
+
+                  <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
+                      <img src="images/appoin-banner-1.jpg" width="250" height="774" loading="lazy" alt="Mujer cortándose el pelo" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                      <h2 class="h2 section-title">Reserva una Cita</h2>
+
+                      <p class="section-text">
+                      ¿Listo para una experiencia de primer nivel en Berkeley Barber Shop? Hacemos que sea fácil para ti reservar tu lugar. Simplemente haz clic abajo para seleccionar el servicio, la fecha y la hora que mejor se ajusten a tu horario. Nuestro sistema de programación Acuity es rápido, fácil de usar y seguro. ¡Déjanos ayudarte a verte y sentirte de lo mejor, reserva tu cita hoy mismo!
+                      </p>
+
+                      <a class="form-btn" href="https://BerkeleyBarberShop.as.me/">
+                          <span class="span">Reservar Ahora</span>
+
+                          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                      </a>
+
+                  </div>
+
+
+                  <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
+                      <img src="images/appoin-banner-2.jpg" width="250" height="774" loading="lazy" alt="Hombre cortándose el pelo" class="img-cover">
+                  </figure>
+
+              </div>
+
+          </div>
+      </section>
+
+    </article>
+  </main>
+
+
+  <section class="map" style="height: 500px; position: relative;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.540649370836!2d-74.44418878794836!3d40.68408907127857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3badcc5f7061d%3A0x5360e9d725f2f9a0!2sBerkeley%20Barber%20Shop!5e0!3m2!1sen!2sus!4v1708802370372!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+
+  <!-- 
+      - #FOOTER
+  -->
+
+  <footer id="footer" class="has-bg-image" style="background-image: url('images/footer-bg.png')">
+      <div class="container">
+
+          <div class="footer-top">
+
+              <!--
+                  <div class="footer-brand">
+
+                  <a href="#" class="logo">
+                  Berkeley<br>Barbershop
+                  </a>
+
+                  </div>
+              -->
+
+              <div class="footer-link-box">
+
+                  <ul class="footer-list">
+
+                      <li>
+                          <p class="footer-list-title">Enlaces Rápidos</p>
+                      </li>
+
+                      <li>
+                          <a href="#about" class="footer-link has-before">Sobre Nosotros</a>
+                      </li>
+
+                      <li>
+                          <a href="#services" class="footer-link has-before">Nuestros Servicios</a>
+                      </li>
+
+                      <li>
+                          <a href="#gallery" class="footer-link has-before">Galería</a>
+                      </li>
+
+                      <li>
+                          <a href="#reviews" class="footer-link has-before">Opiniones</a>
+                      </li>
+
+                      <li>
+                          <a href="https://berkeleybarbershop.as.me/schedule.php" class="footer-link has-before">Agenda una Cita</a>
+                      </li>
+
+                  </ul>
+
+                  <ul class="footer-list">
+
+                      <li>
+                          <p class="footer-list-title">Nuestro Barbería</p>
+                      </li>
+
+                      <img src="images/berkeley_barbershop_small.jpg" height="310" width="310" loading="lazy">
+                  </ul>
+
+                  <ul class="footer-list">
+
+                      <li>
+                          <p class="footer-list-title">Contáctanos</p>
+                      </li>
+
+                      <li class="footer-list-item">
+                          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+                          <address class="contact-link">
+                              <a href="https://www.mapquest.com/us/new-jersey/berkeley-barber-shop-917459">493 Springfield Ave Berkeley Heights, NJ 07922</a>
+                          </address>
+                      </li>
+
+                      <li class="footer-list-item">
+                          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+                          <a href="tel:+19084641166" class="contact-link">(908) 464-1166</a>
+                      </li>
+
+                      <li class="footer-list-item">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                          <span class="contact-link">
+                              Lunes - Viernes: 8 AM - 6 PM<br>
+                              Sábado: 8 AM - 5 PM<br>
+                              Domingo: 10 AM - 3 PM
+                          </span>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+          </div>
+
+          <div class="footer-bottom has-before">
+              <p class="copyright">
+              &copy; 2024 
+              <a href="https://www.lanthiamedia.com" class="copyright-link">lanthiamedia.com</a>
+              <span>Todos los Derechos Reservados.</span>
+              </p>
+          </div>
+
+      </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+      - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- 
+      - custom js link
+  -->
+  <script src="../assets/js/script.js" defer></script>
+
+  <!-- 
+      - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- iconify -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.0.0/dist/iconify-icon.min.js"></script>
+
+  <!--
+      - Yelp Reviews Plugin
+  -->
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
+  <script type='text/javascript' src='../assets/js/vanilla-slider.js'></script>
+
+
+
+
+</body>
+
+</html>
