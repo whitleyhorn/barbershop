@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Check if the preferred language is English
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+# Redirect to English version
+RewriteRule ^$ /en [R,L]
+
+# Check if the preferred language is Spanish
+RewriteCond %{HTTP:Accept-Language} ^es [NC]
+# Redirect to Spanish version
+RewriteRule ^$ /es [R,L]
