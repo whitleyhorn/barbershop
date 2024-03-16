@@ -316,7 +316,7 @@
         background-image: url('../../assets/shared_images/berkeley_barbershop.webp');
     }
     background-size: cover;
-    background-position: center;
+    background-position: 60%;
     height: 92vh;
     position: relative;
     display: flex;
@@ -626,8 +626,8 @@
     min-width: calc(50% - (var(--gap) / 2));
   }
 
-  .title-group .form-btn {
-      width: 40%!important;
+  .title-group .form-btn, .review-button-wrapper {
+      width: 48%!important;
   }
 
   .header-top-item:first-child {
@@ -999,7 +999,11 @@ textarea.input-field {
     background: rgba(255, 255, 255);
     border: 1px solid var(--black);
     margin-top: 20px;
-    width: 66%;
+    width: 82%;
+}
+
+.review-button-wrapper {
+    width: 82%;
 }
 
 .title-group .form-btn:is(:hover, :focus) {
@@ -1539,87 +1543,183 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
 @media (min-width: 1200px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+    /**
+* CUSTOM PROPERTY
+*/
 
-:root {
+    :root {
 
-  /**
-   * typography
-   */
+        /**
+* typography
+*/
 
---fs-40: 11rem;
+        --fs-40: 11rem;
 
-/**
- * spacing
- */
+        /**
+* spacing
+*/
 
---section-padding: 90px;
+        --section-padding: 90px;
 
-  }
-
-
-
-  /**
-   * REUSED STYLE
-   */
-
-.container { max-width: 1200px; }
+    }
 
 
 
-/**
- * HEADER
- */
+    /**
+* REUSED STYLE
+*/
 
-.header-top { max-width: 1260px; }
+    .container { max-width: 1200px; }
 
-.header-top-list { gap: 30px; }
 
-.header-top-item {
+
+    /**
+* HEADER
+*/
+
+    .header-top { max-width: 1260px; }
+
+    .header-top-list { gap: 30px; }
+
+    .header-top-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-top-item:nth-child(2) { margin-inline-end: auto; }
+
+    /**
+* PRICING
+*/
+
+    .filter-btn { min-width: 178px; }
+
+
+
+    /**
+* GALLERY
+*/
+
+    .gallery .grid-list { grid-template-columns: repeat(4, 1fr); }
+
+
+
+    /**
+* APPOINTMENT
+*/
+
+    .appointment-card .card-content { flex-grow: 1; }
+
+
+    /**
+* FOOTER
+*/
+
+    .footer-link-box { grid-template-columns: repeat(3, 1fr); }
+
+
+
+    /**
+* BACK TO TOP
+*/
+
+    .back-top-btn { padding: 15px; }
+
+}
+
+/* REVIEW BUTTON */
+/* COMMONS - START */
+.review-button-wrapper * {
+  box-sizing: border-box;
+}
+
+.review-button-wrapper {
+  margin: 10px auto;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  background-color: #283B25;
+}
+/* COMMONS - END */
+/* STYLES -  START */
+.review-button-wrapper .button {
+  display: flex; /* Make the button a flex container */
+  align-items: center; /* Center the items vertically */
+  justify-content: flex-start; /* Align items to the start of the button */
+  padding: 10px; /* Add some padding inside the button */
+  height: auto; /* Height to be determined by content */
+  min-height: 57px; /* Minimum height for the button */
 }
 
-.header-top-item:nth-child(2) { margin-inline-end: auto; }
-
-/**
- * PRICING
- */
-
-.filter-btn { min-width: 178px; }
-
-
-
-/**
- * GALLERY
- */
-
-.gallery .grid-list { grid-template-columns: repeat(4, 1fr); }
-
-
-
-/**
- * APPOINTMENT
- */
-
-.appointment-card .card-content { flex-grow: 1; }
-
-
-/**
- * FOOTER
- */
-
-.footer-link-box { grid-template-columns: repeat(3, 1fr); }
-
-
-
-/**
- * BACK TO TOP
- */
-
-.back-top-btn { padding: 15px; }
-
+.review-button-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #636e61; /* Lightened purple, approximated value */
 }
+
+.review-button-wrapper .bubble {
+    width: 61px;
+    height: 39px;
+}
+
+.review-button-wrapper .button:hover .icon-message .bubble {
+  transform: scale(1);
+}
+
+.review-button-wrapper .button:hover .icon-message .pencil {
+  transform: scale(0.7) translateX(-25px) translateY(-10px);
+  animation: animate-pencil 0.5s 0.2s alternate infinite linear;
+}
+
+.review-button-wrapper .button:hover .icon-message .text {
+  font-size: 20px;
+}
+
+.review-button-wrapper .button .icon-message {
+  display: flex; /* If you want the icon-message itself to be a flex container */
+  justify-content: center;
+  align-items: center;
+  width: 44px; /* Width of the icon container */
+  width: 59px;
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+.review-button-wrapper .button .icon-message .pencil {
+  position: relative;
+  top: -61px;
+  left: 31px;
+  z-index: 10;
+}
+
+.review-button-wrapper .button .text {
+  color: #fafbff;
+  flex-grow: 1; /* Allow the text to grow and fill the button */
+  font-size: 18px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-transform: uppercase;
+}
+
+.bubble path {
+  fill: none;
+  stroke: #fafbff;
+  stroke-width: 2px;
+}
+
+.pencil {
+  transition: transform 0.1s linear;
+}
+
+.pencil path {
+  fill: #6784ff;
+  stroke: #fafbff;
+  stroke-width: 4px;
+}
+/* STYLES - END */
+/* ANIMATIONS - START */
+@keyframes animate-pencil {
+  100% {
+    transform: scale(0.7) translateX(-10px) translateY(-10px);
+  }
+}
+/* ANIMATIONS - END */
+
