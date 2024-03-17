@@ -6,9 +6,19 @@
  * copyright 2022 codewithsadee
  */
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.cdnfonts.com/css/palatino');
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../fonts/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face{
+    font-family:Palatino;
+    src: url('../fonts/Palatino.woff') format('woff');
+    font-style:normal;
+    font-weight:400;
+}
 
 
 
@@ -139,7 +149,7 @@
   select,
   button,
   textarea,
-  ion-icon { display: block; }
+  .ion-icon { display: block; }
 
   a {
     color: inherit;
@@ -163,7 +173,7 @@
 
   button { cursor: pointer; }
 
-  ion-icon { pointer-events: none; }
+  .ion-icon { pointer-events: none; }
 
   address { font-style: normal; }
 
@@ -251,33 +261,6 @@
 
 .h3 { font-size: var(--fs-24); }
 
-.btn {
-  color: var(--white);
-  background-color: var(--dark-green-gray);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  max-width: max-content;
-  padding: 10px 25px;
-  font-family: var(--header-font);
-  font-size: var(--fs-14);
-  font-weight: var(--fw-600);
-  text-transform: uppercase;
-  border-radius: var(--radius-5);
-  overflow: hidden;
-}
-
-.btn::before {
-  background-color: var(--eerie-black-1);
-  inset: 0;
-  z-index: -1;
-  transform: skewY(-15deg) scaleY(0);
-  transition: var(--transition-2);
-}
-
-.btn:is(:hover, :focus)::before { transform: skewY(-15deg) scaleY(2.5); }
-.btn:is(:hover, :focus){ color: white; }
-
 .text-center { text-align: center; }
 
 .grid-list {
@@ -311,9 +294,9 @@
 
 /* HEADER */
 .new-header {
-    background-image: url('../../assets/shared_images/berkeley_barbershop.jpg');
-    @supports (background-image: url('../../assets/shared_images/berkeley_barbershop.webp')) {
-        background-image: url('../../assets/shared_images/berkeley_barbershop.webp');
+    background-image: url('https://berkeleybarbershop.b-cdn.net/assets/shared_images/berkeley_barbershop.jpg');
+    @supports (background-image: url('https://berkeleybarbershop.b-cdn.net/assets/shared_images/berkeley_barbershop.webp')) {
+        background-image: url('https://berkeleybarbershop.b-cdn.net/assets/shared_images/berkeley_barbershop.webp');
     }
     background-size: cover;
     background-position: 60%;
@@ -444,7 +427,7 @@
   padding-right: 10px;
 }
 
-.header-top-item ion-icon {
+.header-top-item .ion-icon {
   font-size: 18px;
   --ionicon-stroke-width: 50px;
 }
@@ -500,24 +483,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  color: var(--white);
-  font-family: var(--header-font);
-  font-size: 2.7rem;
-  font-weight: var(--fw-600);
-  text-transform: uppercase;
-  line-height: 1.4;
-}
-
-.logo .span {
-  color: var(--white);
-  font-family: var(--ff-body-font);
-  font-size: 1.3rem;
-  font-weight: var(--fw-300);
-  text-transform: capitalize;
-  letter-spacing: 2px;
 }
 
 .nav-toggle-btn {
@@ -1031,11 +996,6 @@ textarea.input-field {
   margin-block-end: 25px;
 }
 
-#footer .logo {
-  text-align: center;
-  padding: 25px 0 0 0;
-}
-
 #footer .input-wrapper {
   background-color: var(--white);
   position: relative;
@@ -1104,7 +1064,7 @@ textarea.input-field {
   margin-block-start: 10px;
 }
 
-.footer-list-item ion-icon {
+.footer-list-item .ion-icon {
   color: var(--light-gray);
   font-size: 18px;
   flex-shrink: 0;
@@ -1237,10 +1197,6 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 .header-top-item .item-link:is(:hover, :focus) { color: var(--light-gray-green); }
 
 .header-top-list { justify-content: space-between; }
-
-.logo { font-size: 3rem; }
-
-.logo .span { font-size: 1.4rem; }
 
 .nav-item-container { display: flex; }
 .nav-toggle-btn { display: none; }
@@ -1520,10 +1476,6 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 .footer-brand {
   display: flex;
   align-items: center;
-}
-
-#footer .logo {
-  padding: 60px 70px 0 0;
 }
 
 #footer .input-wrapper {

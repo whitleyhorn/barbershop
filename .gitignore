@@ -3,4 +3,6 @@
 *Zone.Identifier
 *.zip
 *.webp
-
+*.ttf
+*.woff
+*.min.js
